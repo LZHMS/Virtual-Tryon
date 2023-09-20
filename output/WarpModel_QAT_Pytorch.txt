@@ -1,0 +1,1266 @@
+Number of the images: 2029
+Start processing image...
+QuantizedModel(
+  (quant): Quantize(scale=tensor([0.0158]), zero_point=tensor([63]), dtype=torch.quint8)
+  (dequant): DeQuantize()
+  (model_fp32): AFWM_Quantized(
+    (image_features): FeatureEncoder(
+      (encoders): ModuleList(
+        (0): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), scale=0.05351291969418526, zero_point=69, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.10199172049760818, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.05494288355112076, zero_point=61, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.061662159860134125, zero_point=64
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.10681776702404022, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.06477762758731842, zero_point=65, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.09375647455453873, zero_point=62
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (1): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), scale=0.0634959414601326, zero_point=62, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.08047695457935333, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.04315229505300522, zero_point=62, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.06466430425643921, zero_point=56
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.0721101388335228, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.04821981489658356, zero_point=71, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.07898323237895966, zero_point=66
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (2): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), scale=0.049302875995635986, zero_point=62, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.05904381349682808, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.037316758185625076, zero_point=65, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.06021812930703163, zero_point=70
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.05400737002491951, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.03531887009739876, zero_point=68, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.06560367345809937, zero_point=69
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (3): Sequential(
+<<<<<<< HEAD
+=======
+          (0): DownSample(
+            (block): Sequential(
+              (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): ConvReLU2d(
+                (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): ReLU(inplace=True)
+              )
+              (3): Identity()
+              (4): Identity()
+              (5): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            )
+            (skip_add): FloatFunctional(
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): ConvReLU2d(
+                (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): ReLU(inplace=True)
+              )
+              (3): Identity()
+              (4): Identity()
+              (5): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            )
+            (skip_add): FloatFunctional(
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (4): Sequential(
+>>>>>>> ffbe4600d423d08448584c6500b3108346e02cea
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), scale=0.03584999218583107, zero_point=75, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.04490554705262184, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.02954334206879139, zero_point=72, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.04339408874511719, zero_point=68
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.04272131994366646, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.028263363987207413, zero_point=68, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.0505526103079319, zero_point=64
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (4): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), scale=0.033637262880802155, zero_point=63, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.037683241069316864, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.024705030024051666, zero_point=54, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.031885869801044464, zero_point=69
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.03435702994465828, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.0321916826069355, zero_point=61, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.043297238647937775, zero_point=60
+              (activation_post_process): Identity()
+            )
+          )
+        )
+      )
+    )
+    (cond_features): FeatureEncoder(
+      (encoders): ModuleList(
+        (0): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), scale=0.08051583170890808, zero_point=61, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.11298927664756775, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.07262137532234192, zero_point=68, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.0848313421010971, zero_point=68
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.10351862013339996, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.06547616422176361, zero_point=65, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.10224035382270813, zero_point=67
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (1): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), scale=0.057148877531290054, zero_point=70, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.0703754797577858, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.05234180763363838, zero_point=74, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.07473848015069962, zero_point=66
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.07414320111274719, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.04390047490596771, zero_point=60, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.08773048222064972, zero_point=66
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (2): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), scale=0.045608971267938614, zero_point=62, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.060841724276542664, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.04198480024933815, zero_point=70, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.06387907266616821, zero_point=56
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.06303548067808151, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.04648776724934578, zero_point=65, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.07285503298044205, zero_point=68
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (3): Sequential(
+<<<<<<< HEAD
+=======
+          (0): DownSample(
+            (block): Sequential(
+              (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): ConvReLU2d(
+                (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): ReLU(inplace=True)
+              )
+              (3): Identity()
+              (4): Identity()
+              (5): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            )
+            (skip_add): FloatFunctional(
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): ConvReLU2d(
+                (0): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+                (1): ReLU(inplace=True)
+              )
+              (3): Identity()
+              (4): Identity()
+              (5): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            )
+            (skip_add): FloatFunctional(
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (4): Sequential(
+>>>>>>> ffbe4600d423d08448584c6500b3108346e02cea
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), scale=0.04098302125930786, zero_point=63, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.05176869034767151, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.03538328409194946, zero_point=68, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.04707501828670502, zero_point=64
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.04700147360563278, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.03177061676979065, zero_point=59, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.05457353591918945, zero_point=66
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (4): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), scale=0.03601231798529625, zero_point=57, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.056380391120910645, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.04179436340928078, zero_point=65, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.046121492981910706, zero_point=64
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.04071402922272682, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.03806205093860626, zero_point=63, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=0.05210917815566063, zero_point=54
+              (activation_post_process): Identity()
+            )
+          )
+        )
+      )
+    )
+    (image_FPN): RefinePyramid(
+      (adaptive): ModuleList(
+<<<<<<< HEAD
+        (0): QuantizedConv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), scale=0.026395969092845917, zero_point=61)
+        (1): QuantizedConv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), scale=0.022178450599312782, zero_point=63)
+        (2): QuantizedConv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), scale=0.02927454002201557, zero_point=57)
+        (3): QuantizedConv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), scale=0.03425813466310501, zero_point=54)
+        (4): QuantizedConv2d(32, 256, kernel_size=(1, 1), stride=(1, 1), scale=0.03654215484857559, zero_point=66)
+      )
+      (smooth): ModuleList(
+        (0): QuantizedConv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), scale=0.01282824482768774, zero_point=64, padding=(1, 1))
+        (1): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=0.02257934771478176, zero_point=66, padding=(1, 1))
+        (2): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=0.02700534090399742, zero_point=77, padding=(1, 1))
+        (3): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=0.032151829451322556, zero_point=66, padding=(1, 1))
+        (4): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=0.04640219733119011, zero_point=64, padding=(1, 1))
+      )
+      (skip_add): QFunctional(
+        scale=0.044876355677843094, zero_point=58
+=======
+        (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+        (1): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+        (2): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+        (3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1))
+        (4): Conv2d(32, 256, kernel_size=(1, 1), stride=(1, 1))
+      )
+      (smooth): ModuleList(
+        (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (skip_add): FloatFunctional(
+>>>>>>> ffbe4600d423d08448584c6500b3108346e02cea
+        (activation_post_process): Identity()
+      )
+    )
+    (cond_FPN): RefinePyramid(
+      (adaptive): ModuleList(
+<<<<<<< HEAD
+        (0): QuantizedConv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), scale=0.024189244955778122, zero_point=67)
+        (1): QuantizedConv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), scale=0.021055802702903748, zero_point=65)
+        (2): QuantizedConv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), scale=0.02712283656001091, zero_point=68)
+        (3): QuantizedConv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), scale=0.03569422662258148, zero_point=62)
+        (4): QuantizedConv2d(32, 256, kernel_size=(1, 1), stride=(1, 1), scale=0.03889636695384979, zero_point=71)
+      )
+      (smooth): ModuleList(
+        (0): QuantizedConv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), scale=0.024129770696163177, zero_point=54, padding=(1, 1))
+        (1): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=0.019264448434114456, zero_point=89, padding=(1, 1))
+        (2): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=0.024380827322602272, zero_point=63, padding=(1, 1))
+        (3): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=0.025266466662287712, zero_point=73, padding=(1, 1))
+        (4): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=0.029127176851034164, zero_point=70, padding=(1, 1))
+      )
+      (skip_add): QFunctional(
+        scale=0.045484159141778946, zero_point=62
+=======
+        (0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+        (1): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+        (2): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+        (3): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1))
+        (4): Conv2d(32, 256, kernel_size=(1, 1), stride=(1, 1))
+      )
+      (smooth): ModuleList(
+        (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (4): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (skip_add): FloatFunctional(
+>>>>>>> ffbe4600d423d08448584c6500b3108346e02cea
+        (activation_post_process): Identity()
+      )
+    )
+    (aflow_net): AFlowNet(
+      (netMain): ModuleList(
+        (0): Sequential(
+<<<<<<< HEAD
+          (0): QuantizedConv2d(49, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.05258740112185478, zero_point=70, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.06376873701810837, zero_point=55, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.09690027683973312, zero_point=53, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=0.07928178459405899, zero_point=55, padding=(1, 1))
+        )
+        (1): Sequential(
+          (0): QuantizedConv2d(49, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.04640611633658409, zero_point=71, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.03444743528962135, zero_point=62, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.042496208101511, zero_point=52, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=0.039322588592767715, zero_point=59, padding=(1, 1))
+        )
+        (2): Sequential(
+          (0): QuantizedConv2d(49, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.10075218975543976, zero_point=74, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.06905905157327652, zero_point=70, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.041629914194345474, zero_point=47, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=0.07670798152685165, zero_point=71, padding=(1, 1))
+        )
+        (3): Sequential(
+          (0): QuantizedConv2d(49, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.2976883053779602, zero_point=86, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.07822605967521667, zero_point=69, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.0447787269949913, zero_point=64, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=0.04725908488035202, zero_point=68, padding=(1, 1))
+        )
+        (4): Sequential(
+          (0): QuantizedConv2d(49, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.19478288292884827, zero_point=76, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.1040310263633728, zero_point=69, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.07024925947189331, zero_point=69, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=0.09664894640445709, zero_point=81, padding=(1, 1))
+=======
+          (0): Conv2d(49, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): LeakyReLU(negative_slope=0.1)
+          (2): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (3): LeakyReLU(negative_slope=0.1)
+          (4): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (5): LeakyReLU(negative_slope=0.1)
+          (6): Conv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        )
+        (1): Sequential(
+          (0): Conv2d(49, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): LeakyReLU(negative_slope=0.1)
+          (2): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (3): LeakyReLU(negative_slope=0.1)
+          (4): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (5): LeakyReLU(negative_slope=0.1)
+          (6): Conv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        )
+        (2): Sequential(
+          (0): Conv2d(49, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): LeakyReLU(negative_slope=0.1)
+          (2): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (3): LeakyReLU(negative_slope=0.1)
+          (4): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (5): LeakyReLU(negative_slope=0.1)
+          (6): Conv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        )
+        (3): Sequential(
+          (0): Conv2d(49, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): LeakyReLU(negative_slope=0.1)
+          (2): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (3): LeakyReLU(negative_slope=0.1)
+          (4): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (5): LeakyReLU(negative_slope=0.1)
+          (6): Conv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        )
+        (4): Sequential(
+          (0): Conv2d(49, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): LeakyReLU(negative_slope=0.1)
+          (2): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (3): LeakyReLU(negative_slope=0.1)
+          (4): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (5): LeakyReLU(negative_slope=0.1)
+          (6): Conv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+>>>>>>> ffbe4600d423d08448584c6500b3108346e02cea
+        )
+      )
+      (netRefine): ModuleList(
+        (0): Sequential(
+<<<<<<< HEAD
+          (0): QuantizedConv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.019182907417416573, zero_point=53, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.013427057303488255, zero_point=61, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.020019087940454483, zero_point=49, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=0.029230885207653046, zero_point=82, padding=(1, 1))
+        )
+        (1): Sequential(
+          (0): QuantizedConv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.030088676139712334, zero_point=68, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.022432347759604454, zero_point=43, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.030364498496055603, zero_point=61, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=0.036662742495536804, zero_point=75, padding=(1, 1))
+        )
+        (2): Sequential(
+          (0): QuantizedConv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.03921964019536972, zero_point=66, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.029278691858053207, zero_point=63, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.03031405806541443, zero_point=43, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=0.09113845229148865, zero_point=84, padding=(1, 1))
+        )
+        (3): Sequential(
+          (0): QuantizedConv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.056045547127723694, zero_point=74, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.02984759956598282, zero_point=65, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.03568222373723984, zero_point=46, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=0.19395507872104645, zero_point=88, padding=(1, 1))
+        )
+        (4): Sequential(
+          (0): QuantizedConv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), scale=0.0836348906159401, zero_point=70, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.05530959740281105, zero_point=88, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.03405291587114334, zero_point=49, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=0.10598722100257874, zero_point=73, padding=(1, 1))
+        )
+      )
+      (quant): Quantize(scale=tensor([0.4224]), zero_point=tensor([95]), dtype=torch.quint8)
+=======
+          (0): Conv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): LeakyReLU(negative_slope=0.1)
+          (2): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (3): LeakyReLU(negative_slope=0.1)
+          (4): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (5): LeakyReLU(negative_slope=0.1)
+          (6): Conv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        )
+        (1): Sequential(
+          (0): Conv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): LeakyReLU(negative_slope=0.1)
+          (2): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (3): LeakyReLU(negative_slope=0.1)
+          (4): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (5): LeakyReLU(negative_slope=0.1)
+          (6): Conv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        )
+        (2): Sequential(
+          (0): Conv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): LeakyReLU(negative_slope=0.1)
+          (2): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (3): LeakyReLU(negative_slope=0.1)
+          (4): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (5): LeakyReLU(negative_slope=0.1)
+          (6): Conv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        )
+        (3): Sequential(
+          (0): Conv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): LeakyReLU(negative_slope=0.1)
+          (2): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (3): LeakyReLU(negative_slope=0.1)
+          (4): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (5): LeakyReLU(negative_slope=0.1)
+          (6): Conv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        )
+        (4): Sequential(
+          (0): Conv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (1): LeakyReLU(negative_slope=0.1)
+          (2): Conv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (3): LeakyReLU(negative_slope=0.1)
+          (4): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+          (5): LeakyReLU(negative_slope=0.1)
+          (6): Conv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        )
+      )
+      (quant): QuantStub()
+      (dequant): DeQuantStub()
+    )
+  )
+)
+QuantizedModel(
+  (quant): Quantize(scale=tensor([1.]), zero_point=tensor([0]), dtype=torch.quint8)
+  (dequant): DeQuantize()
+  (model_fp32): AFWM(
+    (image_features): FeatureEncoder(
+      (encoders): ModuleList(
+        (0): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (1): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (2): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (3): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (4): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+        )
+      )
+    )
+    (cond_features): FeatureEncoder(
+      (encoders): ModuleList(
+        (0): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(3, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (1): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(32, 64, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (2): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (3): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+        )
+        (4): Sequential(
+          (0): DownSample(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+          )
+          (1): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+          (2): ResBlock(
+            (block): Sequential(
+              (0): QuantizedBatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+              (1): ReLU(inplace=True)
+              (2): QuantizedConvReLU2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+              (3): Identity()
+              (4): Identity()
+              (5): QuantizedConv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1), bias=False)
+            )
+            (skip_add): QFunctional(
+              scale=1.0, zero_point=0
+              (activation_post_process): Identity()
+            )
+          )
+        )
+      )
+    )
+    (image_FPN): RefinePyramid(
+      (adaptive): ModuleList(
+        (0): QuantizedConv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (1): QuantizedConv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (2): QuantizedConv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (3): QuantizedConv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (4): QuantizedConv2d(32, 256, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+      )
+      (smooth): ModuleList(
+        (0): QuantizedConv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        (1): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        (2): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        (3): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        (4): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+      )
+      (skip_add): QFunctional(
+        scale=1.0, zero_point=0
+        (activation_post_process): Identity()
+      )
+    )
+    (cond_FPN): RefinePyramid(
+      (adaptive): ModuleList(
+        (0): QuantizedConv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (1): QuantizedConv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (2): QuantizedConv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (3): QuantizedConv2d(64, 256, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+        (4): QuantizedConv2d(32, 256, kernel_size=(1, 1), stride=(1, 1), scale=1.0, zero_point=0)
+      )
+      (smooth): ModuleList(
+        (0): QuantizedConv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        (1): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        (2): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        (3): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        (4): QuantizedConv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+      )
+      (skip_add): QFunctional(
+        scale=1.0, zero_point=0
+        (activation_post_process): Identity()
+      )
+    )
+    (aflow_net): AFlowNet(
+      (netMain): ModuleList(
+        (0): Sequential(
+          (0): QuantizedConv2d(49, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        )
+        (1): Sequential(
+          (0): QuantizedConv2d(49, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        )
+        (2): Sequential(
+          (0): QuantizedConv2d(49, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        )
+        (3): Sequential(
+          (0): QuantizedConv2d(49, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        )
+        (4): Sequential(
+          (0): QuantizedConv2d(49, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        )
+      )
+      (netRefine): ModuleList(
+        (0): Sequential(
+          (0): QuantizedConv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        )
+        (1): Sequential(
+          (0): QuantizedConv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        )
+        (2): Sequential(
+          (0): QuantizedConv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        )
+        (3): Sequential(
+          (0): QuantizedConv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        )
+        (4): Sequential(
+          (0): QuantizedConv2d(512, 128, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (1): QuantizedLeakyReLU(negative_slope=0.1)
+          (2): QuantizedConv2d(128, 64, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (3): QuantizedLeakyReLU(negative_slope=0.1)
+          (4): QuantizedConv2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+          (5): QuantizedLeakyReLU(negative_slope=0.1)
+          (6): QuantizedConv2d(32, 2, kernel_size=(3, 3), stride=(1, 1), scale=1.0, zero_point=0, padding=(1, 1))
+        )
+      )
+      (quant): Quantize(scale=tensor([1.]), zero_point=tensor([0]), dtype=torch.quint8)
+>>>>>>> ffbe4600d423d08448584c6500b3108346e02cea
+      (dequant): DeQuantize()
+    )
+  )
+)
+Load and compilt model, used 2.795797109603882 seconds, calculate fps=0.3576797459890369
+Tryon model, used 2776.888713121414 seconds, calculate fps=0.7317542076491398
+Successfully tried on the clothes, used 2779.689509153366 seconds, calculate fps=0.7310168971421933

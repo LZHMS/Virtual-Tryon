@@ -1,0 +1,328 @@
+Start loading dataset...
+Number of the images: 2029
+Start loading tryon model...
+Start quantizing tryon model...
+criterion FID value: 29.643888951214763
+current tuning with accuracy: 29.643888951214763
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 173.0463563023652
+current tuning with accuracy: 173.0463563023652
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 277.1906337303599
+current tuning with accuracy: 277.1906337303599
+criterion FID value: 254.83967016870344
+current tuning with accuracy: 254.83967016870344
+criterion FID value: 274.1681285224024
+current tuning with accuracy: 274.1681285224024
+criterion FID value: 110.91788725339822
+current tuning with accuracy: 110.91788725339822
+criterion FID value: 180.09825821329898
+current tuning with accuracy: 180.09825821329898
+criterion FID value: 178.5593846716612
+current tuning with accuracy: 178.5593846716612
+criterion FID value: 175.63872265852748
+current tuning with accuracy: 175.63872265852748
+criterion FID value: 177.29586236103123
+current tuning with accuracy: 177.29586236103123
+criterion FID value: 200.22135780855302
+current tuning with accuracy: 200.22135780855302
+criterion FID value: 168.3825719329152
+current tuning with accuracy: 168.3825719329152
+criterion FID value: 175.2669620662098
+current tuning with accuracy: 175.2669620662098
+criterion FID value: 175.17851979826122
+current tuning with accuracy: 175.17851979826122
+criterion FID value: 177.25483352880235
+current tuning with accuracy: 177.25483352880235
+criterion FID value: 174.1950946584419
+current tuning with accuracy: 174.1950946584419
+criterion FID value: 175.01833772996892
+current tuning with accuracy: 175.01833772996892
+criterion FID value: 177.5067757751077
+current tuning with accuracy: 177.5067757751077
+criterion FID value: 175.18619690192338
+current tuning with accuracy: 175.18619690192338
+criterion FID value: 175.64121037133157
+current tuning with accuracy: 175.64121037133157
+criterion FID value: 177.13837447572598
+current tuning with accuracy: 177.13837447572598
+criterion FID value: 172.27357474799553
+current tuning with accuracy: 172.27357474799553
+criterion FID value: 174.6633434832795
+current tuning with accuracy: 174.6633434832795
+criterion FID value: 173.42898620119206
+current tuning with accuracy: 173.42898620119206
+criterion FID value: 174.34718024851446
+current tuning with accuracy: 174.34718024851446
+criterion FID value: 176.4519620664262
+current tuning with accuracy: 176.4519620664262
+criterion FID value: 174.73657731513782
+current tuning with accuracy: 174.73657731513782
+criterion FID value: 176.29975753318945
+current tuning with accuracy: 176.29975753318945
+criterion FID value: 175.99561658804174
+current tuning with accuracy: 175.99561658804174
+criterion FID value: 178.90498998860681
+current tuning with accuracy: 178.90498998860681
+criterion FID value: 175.30575242708926
+current tuning with accuracy: 175.30575242708926
+criterion FID value: 174.85040220393404
+current tuning with accuracy: 174.85040220393404
+criterion FID value: 174.72148529584533
+current tuning with accuracy: 174.72148529584533
+criterion FID value: 175.47807901583278
+current tuning with accuracy: 175.47807901583278
+criterion FID value: 177.2849084464342
+current tuning with accuracy: 177.2849084464342
+criterion FID value: 175.4982360064174
+current tuning with accuracy: 175.4982360064174
+criterion FID value: 174.89031745782592
+current tuning with accuracy: 174.89031745782592
+criterion FID value: 176.48886088267358
+current tuning with accuracy: 176.48886088267358
+criterion FID value: 174.0942960562751
+current tuning with accuracy: 174.0942960562751
+criterion FID value: 177.54227353879514
+current tuning with accuracy: 177.54227353879514
+criterion FID value: 176.55394100073198
+current tuning with accuracy: 176.55394100073198
+criterion FID value: 177.8640524632815
+current tuning with accuracy: 177.8640524632815
+criterion FID value: 174.27653749344293
+current tuning with accuracy: 174.27653749344293
+criterion FID value: 176.06044076795968
+current tuning with accuracy: 176.06044076795968
+criterion FID value: 176.83643581025055
+current tuning with accuracy: 176.83643581025055
+criterion FID value: 176.98801886805796
+current tuning with accuracy: 176.98801886805796
+criterion FID value: 174.39217570512264
+current tuning with accuracy: 174.39217570512264
+criterion FID value: 174.1359178842704
+current tuning with accuracy: 174.1359178842704
+criterion FID value: 176.13899046599752
+current tuning with accuracy: 176.13899046599752
+criterion FID value: 173.17668460933956
+current tuning with accuracy: 173.17668460933956
+criterion FID value: 172.95057200838227
+current tuning with accuracy: 172.95057200838227
+criterion FID value: 176.43555315726863
+current tuning with accuracy: 176.43555315726863
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 177.4482246555654
+current tuning with accuracy: 177.4482246555654
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 180.11266793397363
+current tuning with accuracy: 180.11266793397363
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 174.07009165366952
+current tuning with accuracy: 174.07009165366952
+criterion FID value: 176.6361066593362
+current tuning with accuracy: 176.6361066593362
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 177.15796015513683
+current tuning with accuracy: 177.15796015513683
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 177.43361274166318
+current tuning with accuracy: 177.43361274166318
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 176.0911573871536
+current tuning with accuracy: 176.0911573871536
+criterion FID value: 176.0685242068909
+current tuning with accuracy: 176.0685242068909
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 171.01543273532246
+current tuning with accuracy: 171.01543273532246
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 174.03346488029447
+current tuning with accuracy: 174.03346488029447
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 180.46430698825097
+current tuning with accuracy: 180.46430698825097
+criterion FID value: 173.8953799305859
+current tuning with accuracy: 173.8953799305859
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 175.55832419826652
+current tuning with accuracy: 175.55832419826652
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 175.71833130305842
+current tuning with accuracy: 175.71833130305842
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 177.3789294209289
+current tuning with accuracy: 177.3789294209289
+criterion FID value: 176.37155438776128
+current tuning with accuracy: 176.37155438776128
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 176.57224655963998
+current tuning with accuracy: 176.57224655963998
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 171.52843398750628
+current tuning with accuracy: 171.52843398750628
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 178.66033139735117
+current tuning with accuracy: 178.66033139735117
+criterion FID value: 176.6591130990726
+current tuning with accuracy: 176.6591130990726
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 171.39556477910372
+current tuning with accuracy: 171.39556477910372
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 174.4522078988416
+current tuning with accuracy: 174.4522078988416
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 176.66420609987512
+current tuning with accuracy: 176.66420609987512
+criterion FID value: 176.75820839991042
+current tuning with accuracy: 176.75820839991042
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 176.1815428236241
+current tuning with accuracy: 176.1815428236241
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 173.44433994054822
+current tuning with accuracy: 173.44433994054822
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 175.04148358610888
+current tuning with accuracy: 175.04148358610888
+criterion FID value: 175.55287576337437
+current tuning with accuracy: 175.55287576337437
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 176.86357394532783
+current tuning with accuracy: 176.86357394532783
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 176.90312023610775
+current tuning with accuracy: 176.90312023610775
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 179.88463107247716
+current tuning with accuracy: 179.88463107247716
+criterion FID value: 171.35927897683703
+current tuning with accuracy: 171.35927897683703
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 171.37299664132797
+current tuning with accuracy: 171.37299664132797
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 174.93213502045086
+current tuning with accuracy: 174.93213502045086
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 177.97073129245928
+current tuning with accuracy: 177.97073129245928
+criterion FID value: 172.29908837088922
+current tuning with accuracy: 172.29908837088922
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 175.30639267507138
+current tuning with accuracy: 175.30639267507138
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 175.1996646479223
+current tuning with accuracy: 175.1996646479223
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 175.61125684269024
+current tuning with accuracy: 175.61125684269024
+criterion FID value: 172.3853252286315
+current tuning with accuracy: 172.3853252286315
+criterion FID value: 173.17754720392998
+current tuning with accuracy: 173.17754720392998
+criterion FID value: 176.59474067097022
+current tuning with accuracy: 176.59474067097022
+criterion FID value: 176.75047121464894
+current tuning with accuracy: 176.75047121464894
+criterion FID value: 177.67728425647152
+current tuning with accuracy: 177.67728425647152
+criterion FID value: 177.2516147489637
+current tuning with accuracy: 177.2516147489637
+criterion FID value: 176.60968317240838
+current tuning with accuracy: 176.60968317240838
+criterion FID value: 175.07030057236128
+current tuning with accuracy: 175.07030057236128
+criterion FID value: 177.68128043430647
+current tuning with accuracy: 177.68128043430647
+criterion FID value: 174.6118599420048
+current tuning with accuracy: 174.6118599420048
+criterion FID value: 176.64626988595245
+current tuning with accuracy: 176.64626988595245
+criterion FID value: 176.20349979732373
+current tuning with accuracy: 176.20349979732373
+criterion FID value: 175.6586590215818
+current tuning with accuracy: 175.6586590215818
+criterion FID value: 174.74307386242018
+current tuning with accuracy: 174.74307386242018
+criterion FID value: 177.88043464994854
+current tuning with accuracy: 177.88043464994854
+criterion FID value: 175.26213983050806
+current tuning with accuracy: 175.26213983050806
+criterion FID value: 174.34120078273935
+current tuning with accuracy: 174.34120078273935
+criterion FID value: 176.55318985721712
+current tuning with accuracy: 176.55318985721712
+criterion FID value: 173.73340862478034
+current tuning with accuracy: 173.73340862478034
+criterion FID value: 179.09892453713434
+current tuning with accuracy: 179.09892453713434
+criterion FID value: 174.42185490410057
+current tuning with accuracy: 174.42185490410057
+criterion FID value: 173.18373298267227
+current tuning with accuracy: 173.18373298267227
+criterion FID value: 176.14920430734355
+current tuning with accuracy: 176.14920430734355
+criterion FID value: 176.32075324867375
+current tuning with accuracy: 176.32075324867375
+criterion FID value: 173.6793535326335
+current tuning with accuracy: 173.6793535326335
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 173.61177536552634
+current tuning with accuracy: 173.61177536552634
+criterion FID value: 176.07974520167102
+current tuning with accuracy: 176.07974520167102
+criterion FID value: 175.2288958020187
+current tuning with accuracy: 175.2288958020187
+criterion FID value: 173.42206579768958
+current tuning with accuracy: 173.42206579768958
+criterion FID value: 173.41766674111773
+current tuning with accuracy: 173.41766674111773
+criterion FID value: 174.24563634711683
+current tuning with accuracy: 174.24563634711683
+criterion FID value: 176.0841198262725
+current tuning with accuracy: 176.0841198262725
+criterion FID value: 172.4872209362006
+current tuning with accuracy: 172.4872209362006
+criterion FID value: 180.23885706800218
+current tuning with accuracy: 180.23885706800218
+criterion FID value: 179.10095746210192
+current tuning with accuracy: 179.10095746210192
+criterion FID value: 175.11961712534537
+current tuning with accuracy: 175.11961712534537
+criterion FID value: 176.68208887057963
+current tuning with accuracy: 176.68208887057963
+criterion FID value: 176.22702699212817
+current tuning with accuracy: 176.22702699212817
