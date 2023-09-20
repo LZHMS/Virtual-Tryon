@@ -1,0 +1,305 @@
+#------------------Programe Overview-----------------
+# Author: Zhihao Li
+# Time: July 15, 2023
+# Function: This is used for pruning the Image Features Encoder Module, Cond Features Encoder Module in Warp_Model
+#------------------Programe Overview-----------------
+
+import torch_pruning as tp
+from options.train_options import TrainOptions
+from models.networks import ResUnetGenerator, VGGLoss, save_checkpoint, load_checkpoint_part_parallel, \
+    load_checkpoint_parallel
+from models.afwm import TVLoss, AFWM
+import torch.nn as nn
+import torch.nn.functional as F
+import os
+import numpy as np
+import torch
+from torch.utils.data import DataLoader
+import warnings
+warnings.filterwarnings("ignore")
+
+
+def CreateDataset(opt):
+    from data.aligned_dataset import AlignedDataset
+    dataset = AlignedDataset()
+    print("dataset [%s] was created" % (dataset.name()))
+    dataset.initialize(opt)
+    return dataset
+
+
+# load operator
+opt = TrainOptions().parse()
+# create run directory
+FilePath = os.path.join(opt.save_checkpoint, opt.name)
+os.makedirs(FilePath, exist_ok=True)
+
+torch.cuda.set_device(opt.local_rank)
+device = torch.device(f'cuda:{opt.local_rank}')
+
+start_epoch, epoch_iter = 1, 0
+
+train_data = CreateDataset(opt)
+train_loader = DataLoader(train_data, batch_size=opt.batchSize, shuffle=False,
+                          num_workers=4, pin_memory=True)
+dataset_size = len(train_loader)
+print('#fine-pruning images = %d' % dataset_size)
+
+
+#--------------------------Load Warp Model-------------------------------
+PF_warp_model = AFWM(opt, 3)
+PF_warp_model.eval()
+PF_warp_model.cuda()
+load_checkpoint_parallel(PF_warp_model, opt.warp_checkpoint)
+
+PB_warp_model = AFWM(opt, 45)
+PB_warp_model.eval()
+PB_warp_model.cuda()
+load_checkpoint_parallel(PB_warp_model, opt.PBAFN_warp_checkpoint)
+
+PB_gen_model = ResUnetGenerator(8, 4, 5, ngf=64, norm_layer=nn.BatchNorm2d)
+PB_gen_model.eval()
+PB_gen_model.cuda()
+load_checkpoint_parallel(PB_gen_model, opt.PBAFN_gen_checkpoint)
+
+PF_warp_model = torch.nn.SyncBatchNorm.convert_sync_batchnorm(PF_warp_model).to(device)
+
+criterionL1 = nn.L1Loss()
+criterionVGG = VGGLoss()
+criterionL2 = nn.MSELoss('sum')
+
+# optimizer
+params = [p for p in PF_warp_model.parameters()]
+optimizer = torch.optim.Adam(params, lr=opt.lr, betas=(opt.beta1, 0.999))
+
+params_part = []
+for name, param in PF_warp_model.named_parameters():
+    if 'cond_' in name or 'aflow_net.netRefine' in name:
+        params_part.append(param)
+optimizer_part = torch.optim.Adam(params_part, lr=opt.lr, betas=(opt.beta1, 0.999))
+
+total_steps = (start_epoch - 1) * dataset_size + epoch_iter
+
+
+step = 0
+step_per_batch = dataset_size
+
+#--------------------------Prune Warp_model.image_features, Warp_model.cond_features-----------------------
+IF_Module_Name, CF_Module_Name = 'IF_module', 'CF_module'
+IF_Module, CF_Module = PF_warp_model.image_features, PF_warp_model.cond_features
+example_inputs = torch.randn(1, 3, 256, 192).to(device)
+# original module
+IF_origin_output, CF_origin_output = IF_Module(example_inputs), CF_Module(example_inputs)
+torch.save(IF_Module.state_dict, os.path.join(FilePath, 'Original_' + IF_Module_Name + '.pth'))
+torch.save(CF_Module.state_dict, os.path.join(FilePath, 'Original_' + CF_Module_Name + '.pth'))
+
+# pruning module
+# 0. importance criterion for parameter selections
+imp = tp.importance.MagnitudeImportance(p=2, group_reduction='mean')
+# 1. ignore some layers that should not be pruned
+print("Start setting ignored model layer...")
+IF_ignored_layers, CF_ignored_layers = [], []
+for i in range(5):
+    IF_ignored_layers.append(IF_Module.encoders[i][2].block[5])
+    CF_ignored_layers.append(CF_Module.encoders[i][2].block[5])
+
+# 2. Pruner initialization
+print("Start initializing pruner...")
+sparsity = 0.5
+iterative_steps = 5 # prune model iteratively.
+IF_pruner = tp.pruner.MagnitudePruner(
+    IF_Module, 
+    example_inputs, 
+    global_pruning=False, # If False, a uniform sparsity will be assigned to different layers.
+    importance=imp, # importance criterion for parameter selection
+    iterative_steps=iterative_steps, # the number of iterations to achieve target sparsity
+    ch_sparsity=sparsity,
+    ignored_layers=IF_ignored_layers,
+)
+CF_pruner = tp.pruner.MagnitudePruner(
+    CF_Module, 
+    example_inputs, 
+    global_pruning=False, # If False, a uniform sparsity will be assigned to different layers.
+    importance=imp, # importance criterion for parameter selection
+    iterative_steps=iterative_steps, # the number of iterations to achieve target sparsity
+    ch_sparsity=sparsity,
+    ignored_layers=CF_ignored_layers,
+)
+
+print("Start pruning warp_model...")
+IF_base_macs, IF_base_nparams = tp.utils.count_ops_and_params(IF_Module, example_inputs)
+CF_base_macs, CF_base_nparams = tp.utils.count_ops_and_params(CF_Module, example_inputs)
+for i in range(iterative_steps):
+    # 3. the pruner.step will remove some channels from the model with least importance
+    IF_pruner.step()
+    CF_pruner.step()
+
+    # 4. Do whatever you like here, such as fintuning
+    IF_macs, IF_nparams = tp.utils.count_ops_and_params(IF_Module, example_inputs)
+    CF_macs, CF_nparams = tp.utils.count_ops_and_params(CF_Module, example_inputs)
+    print(
+        "  Iter %d/%d, IF Params: %.2f M => %.2f M; CF Params: %.2f M => %.2f M"
+        % (i+1, iterative_steps, IF_base_nparams / 1e6, IF_nparams / 1e6, 
+           CF_base_nparams / 1e6, CF_nparams / 1e6)
+    )
+    print(
+        "  Iter %d/%d, IF MACs: %.2f G => %.2f G; CF MACs: %.2f G => %.2f G"
+        % (i+1, iterative_steps, IF_base_macs / 1e9, IF_macs / 1e9, 
+           CF_base_macs / 1e9, CF_macs / 1e9)
+    )
+
+    # finetune warp_model
+    PF_warp_model.image_features, PF_warp_model.cond_features = IF_Module, CF_Module
+    PF_warp_model.train()
+    for epoch in range(start_epoch, opt.niter + opt.niter_decay + 1):
+        if epoch != start_epoch:
+            epoch_iter = epoch_iter % dataset_size
+
+        for i, data in enumerate(train_loader):
+            total_steps += 1
+            epoch_iter += 1
+            save_fake = True
+
+            t_mask = torch.FloatTensor((data['label'].cpu().numpy() == 7).astype(np.float32))
+            data['label'] = data['label'] * (1 - t_mask) + t_mask * 4
+            edge = data['edge']
+            pre_clothes_edge = torch.FloatTensor((edge.detach().numpy() > 0.5).astype(np.int32))
+            clothes = data['color']
+            clothes = clothes * pre_clothes_edge
+            edge_un = data['edge_un']
+            pre_clothes_edge_un = torch.FloatTensor((edge_un.detach().numpy() > 0.5).astype(np.int32))
+            clothes_un = data['color_un']
+            clothes_un = clothes_un * pre_clothes_edge_un
+            person_clothes_edge = torch.FloatTensor((data['label'].cpu().numpy() == 4).astype(np.int32))
+            real_image = data['image']
+            person_clothes = real_image * person_clothes_edge
+            pose = data['pose']
+            size = data['label'].size()
+            oneHot_size1 = (size[0], 25, size[2], size[3])
+            densepose = torch.cuda.FloatTensor(torch.Size(oneHot_size1)).zero_()
+            densepose = densepose.scatter_(1, data['densepose'].data.long().cuda(), 1.0)
+            densepose_fore = data['densepose'] / 24
+            face_mask = torch.FloatTensor((data['label'].cpu().numpy() == 1).astype(np.int32)) + torch.FloatTensor((data['label'].cpu().numpy() == 12).astype(np.int32))
+            other_clothes_mask = torch.FloatTensor((data['label'].cpu().numpy() == 5).astype(np.int32)) + torch.FloatTensor((data['label'].cpu().numpy() == 6).astype(np.int32)) \
+                                + torch.FloatTensor((data['label'].cpu().numpy() == 8).astype(np.int32)) + torch.FloatTensor((data['label'].cpu().numpy() == 9).astype(np.int32)) \
+                                + torch.FloatTensor((data['label'].cpu().numpy() == 10).astype(np.int32))
+            face_img = face_mask * real_image
+            other_clothes_img = other_clothes_mask * real_image
+            preserve_mask = torch.cat([face_mask, other_clothes_mask], 1)
+
+            concat_un = torch.cat([preserve_mask.cuda(), densepose, pose.cuda()], 1)
+            flow_out_un = PB_warp_model(concat_un.cuda(), clothes_un.cuda(), pre_clothes_edge_un.cuda())
+            warped_cloth_un, last_flow_un, cond_un_all, flow_un_all, delta_list_un, x_all_un, x_edge_all_un, delta_x_all_un, delta_y_all_un = flow_out_un
+            warped_prod_edge_un = F.grid_sample(pre_clothes_edge_un.cuda(), last_flow_un.permute(0, 2, 3, 1),
+                                                mode='bilinear', padding_mode='zeros')
+
+            flow_out_sup = PB_warp_model(concat_un.cuda(), clothes.cuda(), pre_clothes_edge.cuda())
+            warped_cloth_sup, last_flow_sup, cond_sup_all, flow_sup_all, delta_list_sup, x_all_sup, x_edge_all_sup, delta_x_all_sup, delta_y_all_sup = flow_out_sup
+
+            arm_mask = torch.FloatTensor((data['label'].cpu().numpy() == 11).astype(np.float32)) + torch.FloatTensor((data['label'].cpu().numpy() == 13).astype(np.float32))
+            hand_mask = torch.FloatTensor((data['densepose'].cpu().numpy() == 3).astype(np.int32)) + torch.FloatTensor((data['densepose'].cpu().numpy() == 4).astype(np.int32))
+            dense_preserve_mask = torch.FloatTensor((data['densepose'].cpu().numpy() == 15).astype(np.int32)) + torch.FloatTensor((data['densepose'].cpu().numpy() == 16).astype(np.int32)) \
+                                + torch.FloatTensor((data['densepose'].cpu().numpy() == 17).astype(np.int32)) + torch.FloatTensor((data['densepose'].cpu().numpy() == 18).astype(np.int32)) \
+                                + torch.FloatTensor((data['densepose'].cpu().numpy() == 19).astype(np.int32)) + torch.FloatTensor((data['densepose'].cpu().numpy() == 20).astype(np.int32)) \
+                                + torch.FloatTensor((data['densepose'].cpu().numpy() == 21).astype(np.int32)) + torch.FloatTensor((data['densepose'].cpu().numpy() == 22))
+            hand_img = (arm_mask * hand_mask) * real_image
+            dense_preserve_mask = dense_preserve_mask.cuda() * (1 - warped_prod_edge_un)
+            preserve_region = face_img + other_clothes_img + hand_img
+
+            gen_inputs_un = torch.cat([preserve_region.cuda(), warped_cloth_un, warped_prod_edge_un, dense_preserve_mask], 1)
+            gen_outputs_un = PB_gen_model(gen_inputs_un)
+            p_rendered_un, m_composite_un = torch.split(gen_outputs_un, [3, 1], 1)
+            p_rendered_un = torch.tanh(p_rendered_un)
+            m_composite_un = torch.sigmoid(m_composite_un)
+            m_composite_un = m_composite_un * warped_prod_edge_un
+            p_tryon_un = warped_cloth_un * m_composite_un + p_rendered_un * (1 - m_composite_un)
+
+            flow_out = PF_warp_model(p_tryon_un.detach(), clothes.cuda(), pre_clothes_edge.cuda())
+            warped_cloth, last_flow, cond_all, flow_all, delta_list, x_all, x_edge_all, delta_x_all, delta_y_all = flow_out
+            warped_prod_edge = x_edge_all[4]
+
+            epsilon = 0.001
+            loss_smooth = sum([TVLoss(x) for x in delta_list])
+            loss_all = 0
+            loss_fea_sup_all = 0
+            loss_flow_sup_all = 0
+
+            l1_loss_batch = torch.abs(warped_cloth_sup.detach() - person_clothes.cuda())
+            l1_loss_batch = l1_loss_batch.reshape(opt.batchSize, 3 * 256 * 192)
+            l1_loss_batch = l1_loss_batch.sum(dim=1) / (3 * 256 * 192)
+            l1_loss_batch_pred = torch.abs(warped_cloth.detach() - person_clothes.cuda())
+            l1_loss_batch_pred = l1_loss_batch_pred.reshape(opt.batchSize, 3 * 256 * 192)
+            l1_loss_batch_pred = l1_loss_batch_pred.sum(dim=1) / (3 * 256 * 192)
+            weight = (l1_loss_batch < l1_loss_batch_pred).float()
+            num_all = len(np.where(weight.cpu().numpy() > 0)[0])
+            if num_all == 0:
+                num_all = 1
+
+            for num in range(5):
+                cur_person_clothes = F.interpolate(person_clothes, scale_factor=0.5 ** (4 - num), mode='bilinear')
+                cur_person_clothes_edge = F.interpolate(person_clothes_edge, scale_factor=0.5 ** (4 - num), mode='bilinear')
+                loss_l1 = criterionL1(x_all[num], cur_person_clothes.cuda())
+                loss_vgg = criterionVGG(x_all[num], cur_person_clothes.cuda())
+                loss_edge = criterionL1(x_edge_all[num], cur_person_clothes_edge.cuda())
+                b, c, h, w = delta_x_all[num].shape
+                loss_flow_x = (delta_x_all[num].pow(2) + epsilon * epsilon).pow(0.45)
+                loss_flow_x = torch.sum(loss_flow_x) / (b * c * h * w)
+                loss_flow_y = (delta_y_all[num].pow(2) + epsilon * epsilon).pow(0.45)
+                loss_flow_y = torch.sum(loss_flow_y) / (b * c * h * w)
+                loss_second_smooth = loss_flow_x + loss_flow_y
+                b1, c1, h1, w1 = cond_all[num].shape
+                weight_all = weight.reshape(-1, 1, 1, 1).repeat(1, 256, h1, w1)
+                cond_sup_loss = ((cond_sup_all[num].detach() - cond_all[num]) ** 2 * weight_all).sum() / (256 * h1 * w1 * num_all)
+                loss_fea_sup_all = loss_fea_sup_all + (5 - num) * 0.04 * cond_sup_loss
+                loss_all = loss_all + (num + 1) * loss_l1 + (num + 1) * 0.2 * loss_vgg + (num + 1) * 2 * loss_edge + (num + 1) * 6 * loss_second_smooth + (5 - num) * 0.04 * cond_sup_loss
+                if num >= 2:
+                    b1, c1, h1, w1 = flow_all[num].shape
+                    weight_all = weight.reshape(-1, 1, 1).repeat(1, h1, w1)
+                    flow_sup_loss = (torch.norm(flow_sup_all[num].detach() - flow_all[num], p=2, dim=1) * weight_all).sum() / (h1 * w1 * num_all)
+                    loss_flow_sup_all = loss_flow_sup_all + (num + 1) * 1 * flow_sup_loss
+                    loss_all = loss_all + (num + 1) * 1 * flow_sup_loss
+
+            loss_all = 0.01 * loss_smooth + loss_all
+
+            if epoch < opt.niter:
+                optimizer_part.zero_grad()
+                loss_all.backward()
+                optimizer_part.step()
+            else:
+                optimizer.zero_grad()
+                loss_all.backward()
+                optimizer.step()
+    PF_warp_model.eval()
+
+# Validation
+IF_prune_output, CF_prune_output = IF_Module(example_inputs), CF_Module(example_inputs)
+IF_state_dict = {
+    'warp_pruned_model': IF_Module.state_dict(),
+    'pruning': IF_pruner.pruning_history(),
+}
+CF_state_dict = {
+    'warp_pruned_model': CF_Module.state_dict(),
+    'pruning': CF_pruner.pruning_history(),
+}
+torch.save(IF_state_dict, os.path.join(FilePath, 'Pruned_' + IF_Module_Name + '_' + str(sparsity) + '.pth'))
+torch.save(CF_state_dict, os.path.join(FilePath, 'Pruned_' + CF_Module_Name + '_' + str(sparsity) + '.pth'))
+
+# Calculate accuracy
+for i, j in zip(IF_origin_output, IF_prune_output):
+    print("Channels change in every layer: {} ===> {}".format(i.shape, j.shape))
+AAE = torch.mean(torch.abs(IF_origin_output[-1] - IF_prune_output[-1]))
+ARE = AAE / torch.mean(torch.abs(IF_origin_output[-1]))
+print("IF_Model Prune Average Absolute Error:{}, Average Relative Error: {}%".format(AAE, ARE*100))
+
+for i, j in zip(CF_origin_output, CF_prune_output):
+    print("Channels change in every layer: {} ===> {}".format(i.shape, j.shape))
+AAE = torch.mean(torch.abs(CF_origin_output[-1] - CF_prune_output[-1]))
+ARE = AAE / torch.mean(torch.abs(CF_origin_output[-1]))
+print("IF_Model Prune Average Absolute Error:{}, Average Relative Error: {}%".format(AAE, ARE*100))
+
+state_dict = {
+    'model': PF_warp_model.state_dict(),
+    'IF_pruning': IF_pruner.pruning_history(),
+    'CF_pruning': CF_pruner.pruning_history(),
+}
+torch.save(state_dict, os.path.join(FilePath, 'WarpModel_IFCF_' + str(sparsity) + '.pth'))
+print("Successfully pruned the Module!")

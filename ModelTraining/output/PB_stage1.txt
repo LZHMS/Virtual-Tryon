@@ -1,0 +1,438 @@
+------------ Options -------------
+PBAFN_gen_checkpoint: None
+PBAFN_warp_checkpoint: None
+PFAFN_gen_checkpoint: None
+PFAFN_warp_checkpoint: None
+batchSize: 96
+beta1: 0.5
+checkpoints_dir: ./checkpoints
+continue_train: False
+data_type: 32
+dataroot: dataset/VITON_traindata/
+debug: False
+display_freq: 100
+display_winsize: 512
+fineSize: 512
+gpu_ids: [0]
+input_nc: 3
+isTrain: True
+label_nc: 14
+lambda_feat: 10.0
+launcher: pytorch
+loadSize: 512
+load_pretrain: 
+local_rank: 0
+lr: 5e-05
+max_dataset_size: inf
+nThreads: 1
+n_blocks_global: 4
+n_blocks_local: 3
+n_downsample_global: 4
+n_layers_D: 3
+n_local_enhancers: 1
+name: PBAFN_stage1
+ndf: 64
+netG: global
+ngf: 64
+niter: 50
+niter_decay: 50
+niter_fix_global: 0
+no_flip: False
+no_ganFeat_loss: False
+no_html: False
+no_lsgan: False
+no_vgg_loss: False
+norm: instance
+num_D: 2
+num_gpus: 1
+output_nc: 3
+phase: train
+pool_size: 0
+print_freq: 100
+resize_or_crop: None
+save_epoch_freq: 20
+save_latest_freq: 1000
+serial_batches: False
+tf_log: False
+tv_weight: 0.1
+use_dropout: False
+verbose: False
+which_epoch: latest
+-------------- End ----------------
+------------ Options -------------
+PBAFN_gen_checkpoint: None
+PBAFN_warp_checkpoint: None
+PFAFN_gen_checkpoint: None
+PFAFN_warp_checkpoint: None
+batchSize: 96
+beta1: 0.5
+checkpoints_dir: ./checkpoints
+continue_train: False
+data_type: 32
+dataroot: dataset/VITON_traindata/
+debug: False
+display_freq: 100
+display_winsize: 512
+fineSize: 512
+gpu_ids: [0]
+input_nc: 3
+isTrain: True
+label_nc: 14
+lambda_feat: 10.0
+launcher: pytorch
+loadSize: 512
+load_pretrain: 
+local_rank: 0
+lr: 5e-05
+max_dataset_size: inf
+nThreads: 1
+n_blocks_global: 4
+n_blocks_local: 3
+n_downsample_global: 4
+n_layers_D: 3
+n_local_enhancers: 1
+name: PBAFN_stage1
+ndf: 64
+netG: global
+ngf: 64
+niter: 50
+niter_decay: 50
+niter_fix_global: 0
+no_flip: False
+no_ganFeat_loss: False
+no_html: False
+no_lsgan: False
+no_vgg_loss: False
+norm: instance
+num_D: 2
+num_gpus: 1
+output_nc: 3
+phase: train
+pool_size: 0
+print_freq: 100
+resize_or_crop: None
+save_epoch_freq: 20
+save_latest_freq: 1000
+serial_batches: False
+tf_log: False
+tv_weight: 0.1
+use_dropout: False
+verbose: False
+which_epoch: latest
+-------------- End ----------------
+------------ Options -------------
+PBAFN_gen_checkpoint: None
+PBAFN_warp_checkpoint: None
+PFAFN_gen_checkpoint: None
+PFAFN_warp_checkpoint: None
+batchSize: 96
+beta1: 0.5
+checkpoints_dir: ./checkpoints
+continue_train: False
+data_type: 32
+dataroot: dataset/VITON_traindata/
+debug: False
+display_freq: 100
+display_winsize: 512
+fineSize: 512
+gpu_ids: [0]
+input_nc: 3
+isTrain: True
+label_nc: 14
+lambda_feat: 10.0
+launcher: pytorch
+loadSize: 512
+load_pretrain: 
+local_rank: 0
+lr: 5e-05
+max_dataset_size: inf
+nThreads: 1
+n_blocks_global: 4
+n_blocks_local: 3
+n_downsample_global: 4
+n_layers_D: 3
+n_local_enhancers: 1
+name: PBAFN_stage1
+ndf: 64
+netG: global
+ngf: 64
+niter: 50
+niter_decay: 50
+niter_fix_global: 0
+no_flip: False
+no_ganFeat_loss: False
+no_html: False
+no_lsgan: False
+no_vgg_loss: False
+norm: instance
+num_D: 2
+num_gpus: 1
+output_nc: 3
+phase: train
+pool_size: 0
+print_freq: 100
+resize_or_crop: None
+save_epoch_freq: 20
+save_latest_freq: 1000
+serial_batches: False
+tf_log: False
+tv_weight: 0.1
+use_dropout: False
+verbose: False
+which_epoch: latest
+-------------- End ----------------
+dataset [AlignedDataset] was created
+The number of training images = 148
+2023.07.15-01:53:09:100:[step-100]--[loss-5.826664]--[ETA-8:56:29]
+End of epoch 1 / 100 	 Time Taken: 641 sec
+2023.07.15-02:00:22:52:[step-200]--[loss-5.466521]--[ETA-8:50:53]
+End of epoch 2 / 100 	 Time Taken: 640 sec
+2023.07.15-02:07:35:4:[step-300]--[loss-5.208430]--[ETA-8:44:31]
+2023.07.15-02:14:47:104:[step-400]--[loss-5.731301]--[ETA-8:42:44]
+End of epoch 3 / 100 	 Time Taken: 637 sec
+2023.07.15-02:21:56:56:[step-500]--[loss-4.948592]--[ETA-8:36:26]
+End of epoch 4 / 100 	 Time Taken: 635 sec
+2023.07.15-02:29:05:8:[step-600]--[loss-4.565885]--[ETA-8:37:19]
+2023.07.15-02:36:17:108:[step-700]--[loss-4.718426]--[ETA-8:32:12]
+End of epoch 5 / 100 	 Time Taken: 639 sec
+2023.07.15-02:43:33:60:[step-800]--[loss-4.513866]--[ETA-8:30:02]
+End of epoch 6 / 100 	 Time Taken: 648 sec
+2023.07.15-02:50:53:12:[step-900]--[loss-4.401553]--[ETA-8:26:18]
+2023.07.15-02:58:13:112:[step-1000]--[loss-4.527096]--[ETA-8:23:42]
+End of epoch 7 / 100 	 Time Taken: 651 sec
+2023.07.15-03:05:27:64:[step-1100]--[loss-4.590102]--[ETA-8:18:47]
+End of epoch 8 / 100 	 Time Taken: 638 sec
+2023.07.15-03:12:38:16:[step-1200]--[loss-4.275011]--[ETA-8:16:07]
+2023.07.15-03:19:51:116:[step-1300]--[loss-4.467279]--[ETA-8:13:30]
+End of epoch 9 / 100 	 Time Taken: 640 sec
+2023.07.15-03:27:04:68:[step-1400]--[loss-4.154094]--[ETA-8:10:24]
+End of epoch 10 / 100 	 Time Taken: 642 sec
+2023.07.15-03:34:18:20:[step-1500]--[loss-4.233276]--[ETA-8:06:35]
+2023.07.15-03:41:31:120:[step-1600]--[loss-4.107873]--[ETA-8:02:26]
+End of epoch 11 / 100 	 Time Taken: 640 sec
+2023.07.15-03:48:45:72:[step-1700]--[loss-4.123429]--[ETA-8:01:25]
+End of epoch 12 / 100 	 Time Taken: 641 sec
+2023.07.15-03:55:59:24:[step-1800]--[loss-4.391635]--[ETA-7:52:32]
+2023.07.15-04:03:14:124:[step-1900]--[loss-4.044670]--[ETA-7:49:27]
+End of epoch 13 / 100 	 Time Taken: 644 sec
+2023.07.15-04:10:28:76:[step-2000]--[loss-4.267031]--[ETA-7:46:20]
+End of epoch 14 / 100 	 Time Taken: 639 sec
+2023.07.15-04:17:40:28:[step-2100]--[loss-4.297070]--[ETA-7:41:04]
+2023.07.15-04:24:55:128:[step-2200]--[loss-3.900805]--[ETA-7:38:42]
+End of epoch 15 / 100 	 Time Taken: 642 sec
+2023.07.15-04:32:08:80:[step-2300]--[loss-4.300001]--[ETA-7:34:58]
+End of epoch 16 / 100 	 Time Taken: 641 sec
+2023.07.15-04:39:22:32:[step-2400]--[loss-3.861239]--[ETA-7:34:14]
+2023.07.15-04:46:37:132:[step-2500]--[loss-3.814301]--[ETA-7:27:53]
+End of epoch 17 / 100 	 Time Taken: 643 sec
+2023.07.15-04:53:53:84:[step-2600]--[loss-4.265063]--[ETA-7:23:39]
+End of epoch 18 / 100 	 Time Taken: 646 sec
+2023.07.15-05:01:09:36:[step-2700]--[loss-4.437010]--[ETA-7:22:22]
+2023.07.15-05:08:23:136:[step-2800]--[loss-3.961264]--[ETA-7:16:22]
+End of epoch 19 / 100 	 Time Taken: 642 sec
+2023.07.15-05:15:36:88:[step-2900]--[loss-3.789478]--[ETA-7:13:44]
+End of epoch 20 / 100 	 Time Taken: 641 sec
+saving the model at the end of epoch 20, iters 2960
+2023.07.15-05:22:50:40:[step-3000]--[loss-4.003529]--[ETA-7:08:27]
+2023.07.15-05:30:02:140:[step-3100]--[loss-4.136241]--[ETA-7:06:24]
+End of epoch 21 / 100 	 Time Taken: 639 sec
+2023.07.15-05:37:13:92:[step-3200]--[loss-4.639699]--[ETA-7:00:52]
+End of epoch 22 / 100 	 Time Taken: 639 sec
+2023.07.15-05:44:26:44:[step-3300]--[loss-3.767738]--[ETA-6:57:30]
+2023.07.15-05:51:37:144:[step-3400]--[loss-3.987673]--[ETA-6:54:42]
+End of epoch 23 / 100 	 Time Taken: 639 sec
+2023.07.15-05:58:48:96:[step-3500]--[loss-4.128966]--[ETA-6:51:35]
+End of epoch 24 / 100 	 Time Taken: 638 sec
+2023.07.15-06:06:00:48:[step-3600]--[loss-3.528210]--[ETA-6:48:54]
+2023.07.15-06:13:11:148:[step-3700]--[loss-4.018899]--[ETA-6:48:58]
+End of epoch 25 / 100 	 Time Taken: 638 sec
+2023.07.15-06:20:21:100:[step-3800]--[loss-3.938945]--[ETA-6:40:59]
+End of epoch 26 / 100 	 Time Taken: 636 sec
+2023.07.15-06:27:32:52:[step-3900]--[loss-3.926557]--[ETA-6:40:14]
+End of epoch 27 / 100 	 Time Taken: 639 sec
+2023.07.15-06:34:45:4:[step-4000]--[loss-4.036080]--[ETA-6:32:16]
+2023.07.15-06:41:57:104:[step-4100]--[loss-4.336158]--[ETA-6:28:57]
+End of epoch 28 / 100 	 Time Taken: 640 sec
+2023.07.15-06:49:13:56:[step-4200]--[loss-3.906303]--[ETA-6:29:26]
+End of epoch 29 / 100 	 Time Taken: 647 sec
+2023.07.15-06:56:31:8:[step-4300]--[loss-3.669806]--[ETA-6:24:28]
+2023.07.15-07:03:45:108:[step-4400]--[loss-3.777865]--[ETA-6:18:37]
+End of epoch 30 / 100 	 Time Taken: 642 sec
+2023.07.15-07:11:01:60:[step-4500]--[loss-3.726624]--[ETA-6:15:35]
+End of epoch 31 / 100 	 Time Taken: 646 sec
+2023.07.15-07:18:17:12:[step-4600]--[loss-3.643880]--[ETA-6:14:19]
+2023.07.15-07:25:32:112:[step-4700]--[loss-3.889142]--[ETA-6:08:33]
+End of epoch 32 / 100 	 Time Taken: 643 sec
+2023.07.15-07:32:49:64:[step-4800]--[loss-3.961714]--[ETA-6:04:39]
+End of epoch 33 / 100 	 Time Taken: 648 sec
+2023.07.15-07:40:07:16:[step-4900]--[loss-3.632095]--[ETA-6:00:39]
+2023.07.15-07:47:24:116:[step-5000]--[loss-3.850801]--[ETA-5:57:47]
+End of epoch 34 / 100 	 Time Taken: 646 sec
+2023.07.15-07:54:38:68:[step-5100]--[loss-3.610139]--[ETA-5:56:52]
+End of epoch 35 / 100 	 Time Taken: 639 sec
+2023.07.15-08:01:50:20:[step-5200]--[loss-3.679471]--[ETA-5:48:38]
+2023.07.15-08:09:02:120:[step-5300]--[loss-3.710732]--[ETA-5:47:03]
+End of epoch 36 / 100 	 Time Taken: 639 sec
+2023.07.15-08:16:12:72:[step-5400]--[loss-3.660571]--[ETA-5:41:57]
+End of epoch 37 / 100 	 Time Taken: 637 sec
+2023.07.15-08:23:23:24:[step-5500]--[loss-3.955404]--[ETA-5:40:26]
+2023.07.15-08:30:35:124:[step-5600]--[loss-3.655416]--[ETA-5:33:59]
+End of epoch 38 / 100 	 Time Taken: 638 sec
+2023.07.15-08:37:47:76:[step-5700]--[loss-3.771924]--[ETA-5:31:22]
+End of epoch 39 / 100 	 Time Taken: 638 sec
+2023.07.15-08:44:59:28:[step-5800]--[loss-3.825263]--[ETA-5:28:55]
+2023.07.15-08:52:12:128:[step-5900]--[loss-3.561163]--[ETA-5:22:53]
+End of epoch 40 / 100 	 Time Taken: 641 sec
+saving the model at the end of epoch 40, iters 5920
+2023.07.15-08:59:24:80:[step-6000]--[loss-3.924412]--[ETA-5:20:23]
+End of epoch 41 / 100 	 Time Taken: 638 sec
+2023.07.15-09:06:36:32:[step-6100]--[loss-3.523747]--[ETA-5:18:47]
+2023.07.15-09:13:51:132:[step-6200]--[loss-3.491927]--[ETA-5:13:45]
+End of epoch 42 / 100 	 Time Taken: 643 sec
+2023.07.15-09:21:07:84:[step-6300]--[loss-3.827114]--[ETA-5:10:34]
+End of epoch 43 / 100 	 Time Taken: 642 sec
+2023.07.15-09:28:20:36:[step-6400]--[loss-4.156817]--[ETA-5:05:43]
+2023.07.15-09:35:35:136:[step-6500]--[loss-3.623961]--[ETA-5:01:02]
+End of epoch 44 / 100 	 Time Taken: 643 sec
+2023.07.15-09:42:48:88:[step-6600]--[loss-3.490608]--[ETA-5:00:46]
+End of epoch 45 / 100 	 Time Taken: 641 sec
+2023.07.15-09:50:00:40:[step-6700]--[loss-3.709076]--[ETA-4:56:15]
+2023.07.15-09:57:13:140:[step-6800]--[loss-3.872772]--[ETA-4:50:09]
+End of epoch 46 / 100 	 Time Taken: 639 sec
+2023.07.15-10:04:27:92:[step-6900]--[loss-4.364984]--[ETA-4:48:16]
+End of epoch 47 / 100 	 Time Taken: 641 sec
+2023.07.15-10:11:41:44:[step-7000]--[loss-3.532947]--[ETA-4:45:29]
+2023.07.15-10:18:52:144:[step-7100]--[loss-3.764075]--[ETA-4:42:41]
+End of epoch 48 / 100 	 Time Taken: 640 sec
+2023.07.15-10:26:08:96:[step-7200]--[loss-3.919457]--[ETA-4:38:21]
+End of epoch 49 / 100 	 Time Taken: 645 sec
+2023.07.15-10:33:26:48:[step-7300]--[loss-3.316546]--[ETA-4:33:36]
+2023.07.15-10:40:41:148:[step-7400]--[loss-3.652786]--[ETA-4:38:51]
+End of epoch 50 / 100 	 Time Taken: 645 sec
+2023.07.15-10:47:54:100:[step-7500]--[loss-3.625342]--[ETA-4:27:43]
+End of epoch 51 / 100 	 Time Taken: 641 sec
+2023.07.15-10:55:08:52:[step-7600]--[loss-3.722620]--[ETA-4:22:42]
+End of epoch 52 / 100 	 Time Taken: 643 sec
+2023.07.15-11:02:24:4:[step-7700]--[loss-3.796417]--[ETA-4:19:57]
+2023.07.15-11:09:39:104:[step-7800]--[loss-4.114535]--[ETA-4:14:05]
+End of epoch 53 / 100 	 Time Taken: 642 sec
+2023.07.15-11:16:53:56:[step-7900]--[loss-3.693144]--[ETA-4:13:02]
+End of epoch 54 / 100 	 Time Taken: 644 sec
+2023.07.15-11:24:09:8:[step-8000]--[loss-3.483242]--[ETA-4:10:49]
+2023.07.15-11:31:27:108:[step-8100]--[loss-3.620988]--[ETA-4:05:35]
+End of epoch 55 / 100 	 Time Taken: 650 sec
+2023.07.15-11:38:45:60:[step-8200]--[loss-3.478816]--[ETA-4:00:14]
+End of epoch 56 / 100 	 Time Taken: 649 sec
+2023.07.15-11:46:05:12:[step-8300]--[loss-3.474602]--[ETA-3:55:47]
+2023.07.15-11:53:24:112:[step-8400]--[loss-3.685146]--[ETA-3:53:43]
+End of epoch 57 / 100 	 Time Taken: 649 sec
+2023.07.15-12:00:45:64:[step-8500]--[loss-3.677948]--[ETA-3:48:48]
+End of epoch 58 / 100 	 Time Taken: 650 sec
+2023.07.15-12:08:04:16:[step-8600]--[loss-3.438843]--[ETA-3:46:03]
+2023.07.15-12:15:25:116:[step-8700]--[loss-3.592382]--[ETA-3:42:34]
+End of epoch 59 / 100 	 Time Taken: 652 sec
+2023.07.15-12:22:46:68:[step-8800]--[loss-3.384171]--[ETA-3:39:53]
+End of epoch 60 / 100 	 Time Taken: 652 sec
+saving the model at the end of epoch 60, iters 8880
+2023.07.15-12:30:07:20:[step-8900]--[loss-3.461730]--[ETA-3:34:52]
+2023.07.15-12:37:26:120:[step-9000]--[loss-3.496828]--[ETA-3:30:52]
+End of epoch 61 / 100 	 Time Taken: 647 sec
+2023.07.15-12:44:36:72:[step-9100]--[loss-3.466777]--[ETA-3:27:43]
+End of epoch 62 / 100 	 Time Taken: 635 sec
+2023.07.15-12:51:45:24:[step-9200]--[loss-3.688139]--[ETA-3:26:09]
+2023.07.15-12:58:56:124:[step-9300]--[loss-3.409246]--[ETA-3:20:48]
+End of epoch 63 / 100 	 Time Taken: 636 sec
+2023.07.15-13:06:05:76:[step-9400]--[loss-3.616634]--[ETA-3:15:27]
+End of epoch 64 / 100 	 Time Taken: 636 sec
+2023.07.15-13:13:16:28:[step-9500]--[loss-3.613382]--[ETA-3:12:15]
+2023.07.15-13:20:29:128:[step-9600]--[loss-3.329888]--[ETA-3:11:38]
+End of epoch 65 / 100 	 Time Taken: 639 sec
+2023.07.15-13:27:40:80:[step-9700]--[loss-3.743055]--[ETA-3:06:04]
+End of epoch 66 / 100 	 Time Taken: 636 sec
+2023.07.15-13:34:50:32:[step-9800]--[loss-3.310276]--[ETA-3:01:36]
+2023.07.15-13:42:00:132:[step-9900]--[loss-3.285155]--[ETA-2:58:08]
+End of epoch 67 / 100 	 Time Taken: 637 sec
+2023.07.15-13:49:12:84:[step-10000]--[loss-3.612494]--[ETA-2:54:41]
+End of epoch 68 / 100 	 Time Taken: 641 sec
+2023.07.15-13:56:27:36:[step-10100]--[loss-3.964320]--[ETA-2:51:20]
+2023.07.15-14:03:43:136:[step-10200]--[loss-3.441124]--[ETA-2:49:17]
+End of epoch 69 / 100 	 Time Taken: 644 sec
+2023.07.15-14:10:57:88:[step-10300]--[loss-3.291145]--[ETA-2:43:18]
+End of epoch 70 / 100 	 Time Taken: 642 sec
+2023.07.15-14:18:11:40:[step-10400]--[loss-3.524759]--[ETA-2:39:46]
+2023.07.15-14:25:26:140:[step-10500]--[loss-3.650657]--[ETA-2:37:12]
+End of epoch 71 / 100 	 Time Taken: 643 sec
+2023.07.15-14:32:41:92:[step-10600]--[loss-4.123444]--[ETA-2:32:45]
+End of epoch 72 / 100 	 Time Taken: 644 sec
+2023.07.15-14:39:56:44:[step-10700]--[loss-3.359265]--[ETA-2:28:40]
+2023.07.15-14:47:14:144:[step-10800]--[loss-3.562333]--[ETA-2:26:08]
+End of epoch 73 / 100 	 Time Taken: 645 sec
+2023.07.15-14:54:29:96:[step-10900]--[loss-3.720444]--[ETA-2:22:37]
+End of epoch 74 / 100 	 Time Taken: 645 sec
+2023.07.15-15:01:47:48:[step-11000]--[loss-3.151590]--[ETA-2:18:06]
+2023.07.15-15:09:09:148:[step-11100]--[loss-3.470013]--[ETA-2:19:45]
+End of epoch 75 / 100 	 Time Taken: 652 sec
+2023.07.15-15:16:29:100:[step-11200]--[loss-3.423037]--[ETA-2:11:25]
+End of epoch 76 / 100 	 Time Taken: 650 sec
+2023.07.15-15:23:48:52:[step-11300]--[loss-3.527446]--[ETA-2:07:07]
+End of epoch 77 / 100 	 Time Taken: 649 sec
+2023.07.15-15:31:07:4:[step-11400]--[loss-3.568988]--[ETA-2:05:01]
+2023.07.15-15:38:26:104:[step-11500]--[loss-3.950099]--[ETA-2:01:08]
+End of epoch 78 / 100 	 Time Taken: 650 sec
+2023.07.15-15:45:49:56:[step-11600]--[loss-3.501423]--[ETA-1:57:25]
+End of epoch 79 / 100 	 Time Taken: 655 sec
+2023.07.15-15:53:10:8:[step-11700]--[loss-3.261201]--[ETA-1:53:53]
+2023.07.15-16:00:29:108:[step-11800]--[loss-3.415577]--[ETA-1:49:21]
+End of epoch 80 / 100 	 Time Taken: 649 sec
+saving the model at the end of epoch 80, iters 11840
+2023.07.15-16:07:50:60:[step-11900]--[loss-3.297061]--[ETA-1:45:48]
+End of epoch 81 / 100 	 Time Taken: 650 sec
+2023.07.15-16:15:09:12:[step-12000]--[loss-3.284882]--[ETA-1:41:21]
+2023.07.15-16:22:25:112:[step-12100]--[loss-3.499978]--[ETA-1:38:51]
+End of epoch 82 / 100 	 Time Taken: 647 sec
+2023.07.15-16:29:44:64:[step-12200]--[loss-3.477330]--[ETA-1:34:44]
+End of epoch 83 / 100 	 Time Taken: 648 sec
+2023.07.15-16:37:02:16:[step-12300]--[loss-3.286589]--[ETA-1:30:50]
+2023.07.15-16:44:16:116:[step-12400]--[loss-3.420457]--[ETA-1:27:53]
+End of epoch 84 / 100 	 Time Taken: 646 sec
+2023.07.15-16:51:36:68:[step-12500]--[loss-3.226704]--[ETA-1:24:07]
+End of epoch 85 / 100 	 Time Taken: 649 sec
+2023.07.15-16:58:55:20:[step-12600]--[loss-3.288159]--[ETA-1:20:40]
+2023.07.15-17:06:11:120:[step-12700]--[loss-3.312506]--[ETA-1:16:41]
+End of epoch 86 / 100 	 Time Taken: 646 sec
+2023.07.15-17:13:29:72:[step-12800]--[loss-3.288153]--[ETA-1:13:18]
+End of epoch 87 / 100 	 Time Taken: 649 sec
+2023.07.15-17:20:48:24:[step-12900]--[loss-3.496312]--[ETA-1:09:18]
+2023.07.15-17:28:06:124:[step-13000]--[loss-3.231404]--[ETA-1:06:15]
+End of epoch 88 / 100 	 Time Taken: 649 sec
+2023.07.15-17:35:22:76:[step-13100]--[loss-3.404222]--[ETA-1:01:52]
+End of epoch 89 / 100 	 Time Taken: 643 sec
+2023.07.15-17:42:37:28:[step-13200]--[loss-3.445971]--[ETA-0:58:21]
+2023.07.15-17:49:51:128:[step-13300]--[loss-3.138449]--[ETA-0:54:35]
+End of epoch 90 / 100 	 Time Taken: 643 sec
+2023.07.15-17:57:10:80:[step-13400]--[loss-3.563998]--[ETA-0:50:56]
+End of epoch 91 / 100 	 Time Taken: 648 sec
+2023.07.15-18:04:26:32:[step-13500]--[loss-3.138827]--[ETA-0:47:23]
+2023.07.15-18:11:42:132:[step-13600]--[loss-3.121033]--[ETA-0:43:32]
+End of epoch 92 / 100 	 Time Taken: 644 sec
+2023.07.15-18:18:57:84:[step-13700]--[loss-3.438879]--[ETA-0:40:07]
+End of epoch 93 / 100 	 Time Taken: 646 sec
+2023.07.15-18:26:15:36:[step-13800]--[loss-3.766420]--[ETA-0:36:30]
+2023.07.15-18:33:31:136:[step-13900]--[loss-3.282736]--[ETA-0:32:47]
+End of epoch 94 / 100 	 Time Taken: 646 sec
+2023.07.15-18:40:50:88:[step-14000]--[loss-3.141764]--[ETA-0:29:24]
+End of epoch 95 / 100 	 Time Taken: 648 sec
+2023.07.15-18:48:06:40:[step-14100]--[loss-3.301700]--[ETA-0:25:49]
+2023.07.15-18:55:26:140:[step-14200]--[loss-3.491174]--[ETA-0:21:49]
+End of epoch 96 / 100 	 Time Taken: 649 sec
+2023.07.15-19:02:44:92:[step-14300]--[loss-3.957812]--[ETA-0:18:10]
+End of epoch 97 / 100 	 Time Taken: 647 sec
+2023.07.15-19:10:02:44:[step-14400]--[loss-3.224642]--[ETA-0:14:32]
+2023.07.15-19:17:21:144:[step-14500]--[loss-3.404555]--[ETA-0:10:59]
+End of epoch 98 / 100 	 Time Taken: 649 sec
+2023.07.15-19:24:34:96:[step-14600]--[loss-3.558723]--[ETA-0:07:17]
+End of epoch 99 / 100 	 Time Taken: 641 sec
+2023.07.15-19:31:48:48:[step-14700]--[loss-3.015668]--[ETA-0:03:39]
+2023.07.15-19:39:03:148:[step-14800]--[loss-3.343463]--[ETA-0:05:22]
+End of epoch 100 / 100 	 Time Taken: 642 sec
+saving the model at the end of epoch 100, iters 14800

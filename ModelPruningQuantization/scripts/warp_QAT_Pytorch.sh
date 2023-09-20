@@ -1,0 +1,3 @@
+python warp_QAT_Pytorch.py --name warp_QAT_Pytorch --PBAFN_warp_checkpoint checkpoints/PBAFN_e2e/PBAFN_warp_epoch_101.pth --PBAFN_gen_checkpoint 'checkpoints/PBAFN_e2e/PBAFN_gen_epoch_101.pth' --PFAFN_warp_checkpoint checkpoints/pruning/warp_pruning_finetuning_ICPN/WarpModel_ICPN_0.5.pth --lr 0.000003 --niter 10 --niter_decay 10 --batchSize 2 --label_nc 14 > output/warp_QAT_Pytorch.txt
+
+python gen_qat_finetuning.py --name gen_qat_finetuning --lr 0.00003 --niter 5 --niter_decay 5 --batchSize 1 --label_nc 14 > output/gen_qat_finetuning.txt

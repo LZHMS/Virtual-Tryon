@@ -1,0 +1,511 @@
+------------ Options -------------
+PBAFN_gen_checkpoint: None
+PBAFN_warp_checkpoint: checkpoints/PBAFN_stage1/PBAFN_warp_epoch_101.pth
+PFAFN_gen_checkpoint: None
+PFAFN_warp_checkpoint: None
+batchSize: 64
+beta1: 0.5
+checkpoints_dir: ./checkpoints
+continue_train: False
+data_type: 32
+dataroot: dataset/VITON_traindata/
+debug: False
+display_freq: 100
+display_winsize: 512
+fineSize: 512
+gpu_ids: [0]
+input_nc: 3
+isTrain: True
+label_nc: 14
+lambda_feat: 10.0
+launcher: pytorch
+loadSize: 512
+load_pretrain: 
+local_rank: 0
+lr: 5e-05
+max_dataset_size: inf
+nThreads: 1
+n_blocks_global: 4
+n_blocks_local: 3
+n_downsample_global: 4
+n_layers_D: 3
+n_local_enhancers: 1
+name: PBAFN_e2e
+ndf: 64
+netG: global
+ngf: 64
+niter: 50
+niter_decay: 50
+niter_fix_global: 0
+no_flip: False
+no_ganFeat_loss: False
+no_html: False
+no_lsgan: False
+no_vgg_loss: False
+norm: instance
+num_D: 2
+num_gpus: 1
+output_nc: 3
+phase: train
+pool_size: 0
+print_freq: 100
+resize_or_crop: None
+save_epoch_freq: 20
+save_latest_freq: 1000
+serial_batches: False
+tf_log: False
+tv_weight: 0.1
+use_dropout: False
+verbose: False
+which_epoch: latest
+-------------- End ----------------
+------------ Options -------------
+PBAFN_gen_checkpoint: None
+PBAFN_warp_checkpoint: checkpoints/PBAFN_stage1/PBAFN_warp_epoch_101.pth
+PFAFN_gen_checkpoint: None
+PFAFN_warp_checkpoint: None
+batchSize: 64
+beta1: 0.5
+checkpoints_dir: ./checkpoints
+continue_train: False
+data_type: 32
+dataroot: dataset/VITON_traindata/
+debug: False
+display_freq: 100
+display_winsize: 512
+fineSize: 512
+gpu_ids: [0]
+input_nc: 3
+isTrain: True
+label_nc: 14
+lambda_feat: 10.0
+launcher: pytorch
+loadSize: 512
+load_pretrain: 
+local_rank: 0
+lr: 5e-05
+max_dataset_size: inf
+nThreads: 1
+n_blocks_global: 4
+n_blocks_local: 3
+n_downsample_global: 4
+n_layers_D: 3
+n_local_enhancers: 1
+name: PBAFN_e2e
+ndf: 64
+netG: global
+ngf: 64
+niter: 50
+niter_decay: 50
+niter_fix_global: 0
+no_flip: False
+no_ganFeat_loss: False
+no_html: False
+no_lsgan: False
+no_vgg_loss: False
+norm: instance
+num_D: 2
+num_gpus: 1
+output_nc: 3
+phase: train
+pool_size: 0
+print_freq: 100
+resize_or_crop: None
+save_epoch_freq: 20
+save_latest_freq: 1000
+serial_batches: False
+tf_log: False
+tv_weight: 0.1
+use_dropout: False
+verbose: False
+which_epoch: latest
+-------------- End ----------------
+------------ Options -------------
+PBAFN_gen_checkpoint: None
+PBAFN_warp_checkpoint: checkpoints/PBAFN_stage1/PBAFN_warp_epoch_101.pth
+PFAFN_gen_checkpoint: None
+PFAFN_warp_checkpoint: None
+batchSize: 64
+beta1: 0.5
+checkpoints_dir: ./checkpoints
+continue_train: False
+data_type: 32
+dataroot: dataset/VITON_traindata/
+debug: False
+display_freq: 100
+display_winsize: 512
+fineSize: 512
+gpu_ids: [0]
+input_nc: 3
+isTrain: True
+label_nc: 14
+lambda_feat: 10.0
+launcher: pytorch
+loadSize: 512
+load_pretrain: 
+local_rank: 0
+lr: 5e-05
+max_dataset_size: inf
+nThreads: 1
+n_blocks_global: 4
+n_blocks_local: 3
+n_downsample_global: 4
+n_layers_D: 3
+n_local_enhancers: 1
+name: PBAFN_e2e
+ndf: 64
+netG: global
+ngf: 64
+niter: 50
+niter_decay: 50
+niter_fix_global: 0
+no_flip: False
+no_ganFeat_loss: False
+no_html: False
+no_lsgan: False
+no_vgg_loss: False
+norm: instance
+num_D: 2
+num_gpus: 1
+output_nc: 3
+phase: train
+pool_size: 0
+print_freq: 100
+resize_or_crop: None
+save_epoch_freq: 20
+save_latest_freq: 1000
+serial_batches: False
+tf_log: False
+tv_weight: 0.1
+use_dropout: False
+verbose: False
+which_epoch: latest
+-------------- End ----------------
+dataset [AlignedDataset] was created
+2023.07.16-02:33:45:100:[step-100]--[loss-7.842278]--[loss-3.401840]--[ETA-13:45:11]
+2023.07.16-02:37:31:200:[step-200]--[loss-6.666911]--[loss-3.054896]--[ETA-13:49:39]
+End of epoch 1 / 100 	 Time Taken: 503 sec
+2023.07.16-02:41:19:78:[step-300]--[loss-6.368855]--[loss-2.993914]--[ETA-13:45:22]
+2023.07.16-02:45:04:178:[step-400]--[loss-5.735356]--[loss-2.811627]--[ETA-13:40:08]
+End of epoch 2 / 100 	 Time Taken: 502 sec
+2023.07.16-02:48:52:56:[step-500]--[loss-5.883941]--[loss-2.839063]--[ETA-13:36:03]
+2023.07.16-02:52:38:156:[step-600]--[loss-6.832635]--[loss-3.026534]--[ETA-13:42:00]
+End of epoch 3 / 100 	 Time Taken: 502 sec
+2023.07.16-02:56:25:34:[step-700]--[loss-5.168338]--[loss-2.706169]--[ETA-13:29:55]
+2023.07.16-03:00:11:134:[step-800]--[loss-5.621194]--[loss-2.766991]--[ETA-13:27:51]
+End of epoch 4 / 100 	 Time Taken: 503 sec
+2023.07.16-03:03:59:12:[step-900]--[loss-4.899707]--[loss-2.671097]--[ETA-13:20:17]
+2023.07.16-03:07:45:112:[step-1000]--[loss-5.135260]--[loss-2.602082]--[ETA-13:15:08]
+2023.07.16-03:11:31:212:[step-1100]--[loss-5.285097]--[loss-2.616430]--[ETA-13:22:56]
+End of epoch 5 / 100 	 Time Taken: 503 sec
+2023.07.16-03:15:19:90:[step-1200]--[loss-4.969185]--[loss-2.626486]--[ETA-13:08:12]
+2023.07.16-03:19:05:190:[step-1300]--[loss-4.787800]--[loss-2.544841]--[ETA-13:06:35]
+End of epoch 6 / 100 	 Time Taken: 503 sec
+2023.07.16-03:22:53:68:[step-1400]--[loss-5.733299]--[loss-2.558429]--[ETA-12:53:41]
+2023.07.16-03:26:38:168:[step-1500]--[loss-5.175743]--[loss-2.522489]--[ETA-12:54:05]
+End of epoch 7 / 100 	 Time Taken: 502 sec
+2023.07.16-03:30:26:46:[step-1600]--[loss-5.424288]--[loss-2.397183]--[ETA-12:55:55]
+2023.07.16-03:34:12:146:[step-1700]--[loss-4.817583]--[loss-2.384211]--[ETA-12:51:23]
+End of epoch 8 / 100 	 Time Taken: 503 sec
+2023.07.16-03:37:59:24:[step-1800]--[loss-4.741221]--[loss-2.349336]--[ETA-12:49:04]
+2023.07.16-03:41:46:124:[step-1900]--[loss-5.204398]--[loss-2.446564]--[ETA-12:48:32]
+End of epoch 9 / 100 	 Time Taken: 504 sec
+2023.07.16-03:45:34:2:[step-2000]--[loss-4.851207]--[loss-2.268246]--[ETA-12:33:33]
+2023.07.16-03:49:20:102:[step-2100]--[loss-4.539742]--[loss-2.279102]--[ETA-12:42:37]
+2023.07.16-03:53:05:202:[step-2200]--[loss-4.931640]--[loss-2.283638]--[ETA-12:30:01]
+End of epoch 10 / 100 	 Time Taken: 503 sec
+2023.07.16-03:56:53:80:[step-2300]--[loss-4.747674]--[loss-2.293423]--[ETA-12:24:30]
+2023.07.16-04:00:39:180:[step-2400]--[loss-4.502086]--[loss-2.288566]--[ETA-12:23:04]
+End of epoch 11 / 100 	 Time Taken: 503 sec
+2023.07.16-04:04:27:58:[step-2500]--[loss-4.481018]--[loss-2.274379]--[ETA-12:20:13]
+2023.07.16-04:08:12:158:[step-2600]--[loss-4.688159]--[loss-2.222294]--[ETA-12:15:20]
+End of epoch 12 / 100 	 Time Taken: 502 sec
+2023.07.16-04:12:00:36:[step-2700]--[loss-5.061057]--[loss-2.166668]--[ETA-12:09:51]
+2023.07.16-04:15:46:136:[step-2800]--[loss-4.758794]--[loss-2.191570]--[ETA-12:09:08]
+End of epoch 13 / 100 	 Time Taken: 503 sec
+2023.07.16-04:19:34:14:[step-2900]--[loss-4.674791]--[loss-2.212137]--[ETA-12:03:30]
+2023.07.16-04:23:21:114:[step-3000]--[loss-4.645892]--[loss-2.192174]--[ETA-12:06:12]
+2023.07.16-04:27:07:214:[step-3100]--[loss-4.866950]--[loss-2.185780]--[ETA-12:00:48]
+End of epoch 14 / 100 	 Time Taken: 504 sec
+2023.07.16-04:30:55:92:[step-3200]--[loss-4.873981]--[loss-2.132204]--[ETA-12:00:20]
+2023.07.16-04:34:41:192:[step-3300]--[loss-4.472313]--[loss-2.059312]--[ETA-11:52:42]
+End of epoch 15 / 100 	 Time Taken: 503 sec
+2023.07.16-04:38:29:70:[step-3400]--[loss-4.312500]--[loss-2.134236]--[ETA-11:48:00]
+2023.07.16-04:42:15:170:[step-3500]--[loss-4.455262]--[loss-2.083156]--[ETA-11:51:32]
+End of epoch 16 / 100 	 Time Taken: 504 sec
+2023.07.16-04:46:04:48:[step-3600]--[loss-4.306147]--[loss-2.079654]--[ETA-11:41:20]
+2023.07.16-04:49:50:148:[step-3700]--[loss-4.614847]--[loss-2.153487]--[ETA-11:33:39]
+End of epoch 17 / 100 	 Time Taken: 504 sec
+2023.07.16-04:53:38:26:[step-3800]--[loss-4.468072]--[loss-2.067039]--[ETA-11:35:32]
+2023.07.16-04:57:25:126:[step-3900]--[loss-4.619335]--[loss-2.133124]--[ETA-11:32:39]
+End of epoch 18 / 100 	 Time Taken: 503 sec
+2023.07.16-05:01:13:4:[step-4000]--[loss-4.397361]--[loss-2.065193]--[ETA-11:24:18]
+2023.07.16-05:04:59:104:[step-4100]--[loss-4.831791]--[loss-2.031140]--[ETA-11:20:14]
+2023.07.16-05:08:46:204:[step-4200]--[loss-4.310022]--[loss-2.064410]--[ETA-11:15:07]
+End of epoch 19 / 100 	 Time Taken: 504 sec
+2023.07.16-05:12:33:82:[step-4300]--[loss-4.449787]--[loss-2.025281]--[ETA-11:07:23]
+2023.07.16-05:16:19:182:[step-4400]--[loss-4.264969]--[loss-2.039877]--[ETA-11:10:45]
+End of epoch 20 / 100 	 Time Taken: 503 sec
+saving the model at the end of epoch 20, iters 4440
+2023.07.16-05:20:08:60:[step-4500]--[loss-4.348696]--[loss-1.980024]--[ETA-11:09:32]
+2023.07.16-05:23:54:160:[step-4600]--[loss-4.367732]--[loss-2.056864]--[ETA-11:07:10]
+End of epoch 21 / 100 	 Time Taken: 503 sec
+2023.07.16-05:27:42:38:[step-4700]--[loss-4.108661]--[loss-1.963032]--[ETA-11:08:48]
+2023.07.16-05:31:27:138:[step-4800]--[loss-5.209863]--[loss-2.149077]--[ETA-10:52:23]
+End of epoch 22 / 100 	 Time Taken: 502 sec
+2023.07.16-05:35:15:16:[step-4900]--[loss-4.371296]--[loss-2.009546]--[ETA-10:52:10]
+2023.07.16-05:39:01:116:[step-5000]--[loss-4.392240]--[loss-2.056459]--[ETA-10:49:20]
+2023.07.16-05:42:47:216:[step-5100]--[loss-4.584661]--[loss-2.094215]--[ETA-10:34:50]
+End of epoch 23 / 100 	 Time Taken: 504 sec
+2023.07.16-05:46:35:94:[step-5200]--[loss-4.451544]--[loss-1.962602]--[ETA-10:38:21]
+2023.07.16-05:50:21:194:[step-5300]--[loss-4.720119]--[loss-2.037819]--[ETA-10:36:05]
+End of epoch 24 / 100 	 Time Taken: 502 sec
+2023.07.16-05:54:08:72:[step-5400]--[loss-3.867513]--[loss-1.856626]--[ETA-10:24:55]
+2023.07.16-05:57:54:172:[step-5500]--[loss-3.688481]--[loss-1.847069]--[ETA-10:24:36]
+End of epoch 25 / 100 	 Time Taken: 503 sec
+2023.07.16-06:01:42:50:[step-5600]--[loss-4.504512]--[loss-1.919950]--[ETA-10:27:47]
+2023.07.16-06:05:28:150:[step-5700]--[loss-4.222367]--[loss-1.912985]--[ETA-10:18:09]
+End of epoch 26 / 100 	 Time Taken: 504 sec
+2023.07.16-06:09:16:28:[step-5800]--[loss-4.659456]--[loss-1.989895]--[ETA-10:14:22]
+2023.07.16-06:13:02:128:[step-5900]--[loss-4.544302]--[loss-2.019863]--[ETA-10:07:39]
+End of epoch 27 / 100 	 Time Taken: 503 sec
+2023.07.16-06:16:50:6:[step-6000]--[loss-4.560081]--[loss-1.972719]--[ETA-10:07:16]
+2023.07.16-06:20:35:106:[step-6100]--[loss-4.463126]--[loss-1.939581]--[ETA-10:01:25]
+2023.07.16-06:24:21:206:[step-6200]--[loss-3.613094]--[loss-1.850845]--[ETA-9:56:34]
+End of epoch 28 / 100 	 Time Taken: 502 sec
+2023.07.16-06:28:09:84:[step-6300]--[loss-4.194906]--[loss-1.972453]--[ETA-10:00:44]
+2023.07.16-06:31:55:184:[step-6400]--[loss-4.012439]--[loss-1.924526]--[ETA-9:57:08]
+End of epoch 29 / 100 	 Time Taken: 503 sec
+2023.07.16-06:35:42:62:[step-6500]--[loss-3.998333]--[loss-1.880604]--[ETA-9:52:35]
+2023.07.16-06:39:28:162:[step-6600]--[loss-4.080065]--[loss-1.860497]--[ETA-9:41:07]
+End of epoch 30 / 100 	 Time Taken: 501 sec
+2023.07.16-06:43:15:40:[step-6700]--[loss-4.105371]--[loss-1.916955]--[ETA-9:35:52]
+2023.07.16-06:47:00:140:[step-6800]--[loss-4.210754]--[loss-1.963197]--[ETA-9:40:23]
+End of epoch 31 / 100 	 Time Taken: 503 sec
+2023.07.16-06:50:48:18:[step-6900]--[loss-4.012924]--[loss-1.796417]--[ETA-9:34:09]
+2023.07.16-06:54:34:118:[step-7000]--[loss-4.016680]--[loss-1.821674]--[ETA-9:34:54]
+2023.07.16-06:58:20:218:[step-7100]--[loss-4.176579]--[loss-1.855144]--[ETA-9:24:33]
+End of epoch 32 / 100 	 Time Taken: 503 sec
+2023.07.16-07:02:08:96:[step-7200]--[loss-4.039339]--[loss-1.852091]--[ETA-9:21:31]
+2023.07.16-07:05:53:196:[step-7300]--[loss-4.216633]--[loss-1.862792]--[ETA-9:19:35]
+End of epoch 33 / 100 	 Time Taken: 502 sec
+2023.07.16-07:09:41:74:[step-7400]--[loss-3.980615]--[loss-1.804256]--[ETA-9:16:13]
+2023.07.16-07:13:27:174:[step-7500]--[loss-4.308727]--[loss-1.821362]--[ETA-9:10:04]
+End of epoch 34 / 100 	 Time Taken: 503 sec
+2023.07.16-07:17:15:52:[step-7600]--[loss-4.298369]--[loss-1.906155]--[ETA-9:08:57]
+2023.07.16-07:21:02:152:[step-7700]--[loss-3.902437]--[loss-1.790886]--[ETA-9:07:20]
+End of epoch 35 / 100 	 Time Taken: 504 sec
+2023.07.16-07:24:50:30:[step-7800]--[loss-3.775905]--[loss-1.849132]--[ETA-9:07:58]
+2023.07.16-07:28:36:130:[step-7900]--[loss-4.020540]--[loss-1.889639]--[ETA-8:57:27]
+End of epoch 36 / 100 	 Time Taken: 503 sec
+2023.07.16-07:32:24:8:[step-8000]--[loss-4.570211]--[loss-1.832532]--[ETA-8:50:47]
+2023.07.16-07:36:10:108:[step-8100]--[loss-4.123160]--[loss-1.927299]--[ETA-8:49:12]
+2023.07.16-07:39:56:208:[step-8200]--[loss-4.169301]--[loss-1.853282]--[ETA-8:48:52]
+End of epoch 37 / 100 	 Time Taken: 504 sec
+2023.07.16-07:43:44:86:[step-8300]--[loss-4.251639]--[loss-1.825195]--[ETA-8:43:36]
+2023.07.16-07:47:31:186:[step-8400]--[loss-3.959448]--[loss-1.817016]--[ETA-8:39:42]
+End of epoch 38 / 100 	 Time Taken: 504 sec
+2023.07.16-07:51:18:64:[step-8500]--[loss-4.407684]--[loss-1.900796]--[ETA-8:33:27]
+2023.07.16-07:55:04:164:[step-8600]--[loss-3.747268]--[loss-1.753758]--[ETA-8:33:33]
+End of epoch 39 / 100 	 Time Taken: 503 sec
+2023.07.16-07:58:52:42:[step-8700]--[loss-4.107166]--[loss-1.806757]--[ETA-8:25:02]
+2023.07.16-08:02:38:142:[step-8800]--[loss-4.088906]--[loss-1.780557]--[ETA-8:25:34]
+End of epoch 40 / 100 	 Time Taken: 504 sec
+saving the model at the end of epoch 40, iters 8880
+2023.07.16-08:06:27:20:[step-8900]--[loss-4.190627]--[loss-1.877795]--[ETA-8:18:23]
+2023.07.16-08:10:13:120:[step-9000]--[loss-4.251121]--[loss-1.846841]--[ETA-8:19:17]
+2023.07.16-08:13:59:220:[step-9100]--[loss-3.660765]--[loss-1.785505]--[ETA-8:13:47]
+End of epoch 41 / 100 	 Time Taken: 503 sec
+2023.07.16-08:17:46:98:[step-9200]--[loss-3.834624]--[loss-1.759572]--[ETA-8:08:05]
+2023.07.16-08:21:32:198:[step-9300]--[loss-3.816478]--[loss-1.831844]--[ETA-8:01:51]
+End of epoch 42 / 100 	 Time Taken: 502 sec
+2023.07.16-08:25:20:76:[step-9400]--[loss-3.887870]--[loss-1.920848]--[ETA-8:12:30]
+2023.07.16-08:29:07:176:[step-9500]--[loss-3.840518]--[loss-1.763298]--[ETA-7:58:19]
+End of epoch 43 / 100 	 Time Taken: 504 sec
+2023.07.16-08:32:55:54:[step-9600]--[loss-4.344395]--[loss-1.862924]--[ETA-7:54:04]
+2023.07.16-08:36:42:154:[step-9700]--[loss-3.940725]--[loss-1.847282]--[ETA-7:50:41]
+End of epoch 44 / 100 	 Time Taken: 504 sec
+2023.07.16-08:40:30:32:[step-9800]--[loss-4.261452]--[loss-1.838132]--[ETA-7:46:05]
+2023.07.16-08:44:16:132:[step-9900]--[loss-3.815785]--[loss-1.789372]--[ETA-7:41:21]
+End of epoch 45 / 100 	 Time Taken: 504 sec
+2023.07.16-08:48:04:10:[step-10000]--[loss-4.066203]--[loss-1.785131]--[ETA-7:38:58]
+2023.07.16-08:51:51:110:[step-10100]--[loss-3.824274]--[loss-1.771001]--[ETA-7:36:32]
+2023.07.16-08:55:37:210:[step-10200]--[loss-3.970113]--[loss-1.739485]--[ETA-7:31:23]
+End of epoch 46 / 100 	 Time Taken: 504 sec
+2023.07.16-08:59:25:88:[step-10300]--[loss-3.784673]--[loss-1.700052]--[ETA-7:28:47]
+2023.07.16-09:03:11:188:[step-10400]--[loss-4.122395]--[loss-1.790698]--[ETA-7:22:59]
+End of epoch 47 / 100 	 Time Taken: 503 sec
+2023.07.16-09:06:59:66:[step-10500]--[loss-3.716044]--[loss-1.734614]--[ETA-7:19:03]
+2023.07.16-09:10:45:166:[step-10600]--[loss-4.130008]--[loss-1.705917]--[ETA-7:17:43]
+End of epoch 48 / 100 	 Time Taken: 503 sec
+2023.07.16-09:14:33:44:[step-10700]--[loss-4.183745]--[loss-1.830461]--[ETA-7:14:09]
+2023.07.16-09:18:19:144:[step-10800]--[loss-4.350387]--[loss-1.839130]--[ETA-7:08:37]
+End of epoch 49 / 100 	 Time Taken: 503 sec
+2023.07.16-09:22:07:22:[step-10900]--[loss-3.878635]--[loss-1.752606]--[ETA-7:05:25]
+2023.07.16-09:25:53:122:[step-11000]--[loss-3.727060]--[loss-1.701350]--[ETA-7:01:09]
+2023.07.16-09:29:38:222:[step-11100]--[loss-3.761059]--[loss-1.705745]--[ETA-7:04:43]
+End of epoch 50 / 100 	 Time Taken: 502 sec
+2023.07.16-09:33:25:100:[step-11200]--[loss-3.810491]--[loss-1.723838]--[ETA-6:53:06]
+2023.07.16-09:37:12:200:[step-11300]--[loss-3.882951]--[loss-1.760377]--[ETA-6:50:15]
+End of epoch 51 / 100 	 Time Taken: 503 sec
+2023.07.16-09:41:00:78:[step-11400]--[loss-4.190498]--[loss-1.835252]--[ETA-6:44:27]
+2023.07.16-09:44:46:178:[step-11500]--[loss-3.766329]--[loss-1.743699]--[ETA-6:44:39]
+End of epoch 52 / 100 	 Time Taken: 503 sec
+2023.07.16-09:48:33:56:[step-11600]--[loss-4.169331]--[loss-1.823128]--[ETA-6:35:55]
+2023.07.16-09:52:19:156:[step-11700]--[loss-4.816973]--[loss-1.723687]--[ETA-6:34:48]
+End of epoch 53 / 100 	 Time Taken: 502 sec
+2023.07.16-09:56:06:34:[step-11800]--[loss-3.707458]--[loss-1.732321]--[ETA-6:31:20]
+2023.07.16-09:59:52:134:[step-11900]--[loss-4.200668]--[loss-1.785846]--[ETA-6:27:04]
+End of epoch 54 / 100 	 Time Taken: 503 sec
+2023.07.16-10:03:41:12:[step-12000]--[loss-3.583041]--[loss-1.663434]--[ETA-6:21:33]
+2023.07.16-10:07:26:112:[step-12100]--[loss-3.755557]--[loss-1.712805]--[ETA-6:18:43]
+2023.07.16-10:11:11:212:[step-12200]--[loss-3.927418]--[loss-1.776265]--[ETA-6:15:07]
+End of epoch 55 / 100 	 Time Taken: 502 sec
+2023.07.16-10:14:58:90:[step-12300]--[loss-3.809112]--[loss-1.757425]--[ETA-6:09:55]
+2023.07.16-10:18:44:190:[step-12400]--[loss-3.763206]--[loss-1.713533]--[ETA-6:09:03]
+End of epoch 56 / 100 	 Time Taken: 502 sec
+2023.07.16-10:22:31:68:[step-12500]--[loss-4.555757]--[loss-1.734236]--[ETA-6:02:52]
+2023.07.16-10:26:16:168:[step-12600]--[loss-4.155689]--[loss-1.760047]--[ETA-6:04:04]
+End of epoch 57 / 100 	 Time Taken: 502 sec
+2023.07.16-10:30:04:46:[step-12700]--[loss-4.230850]--[loss-1.642083]--[ETA-5:53:13]
+2023.07.16-10:33:49:146:[step-12800]--[loss-3.881706]--[loss-1.704901]--[ETA-6:01:02]
+End of epoch 58 / 100 	 Time Taken: 501 sec
+2023.07.16-10:37:36:24:[step-12900]--[loss-3.855023]--[loss-1.707347]--[ETA-5:48:14]
+2023.07.16-10:41:21:124:[step-13000]--[loss-4.309441]--[loss-1.755024]--[ETA-5:50:58]
+End of epoch 59 / 100 	 Time Taken: 502 sec
+2023.07.16-10:45:08:2:[step-13100]--[loss-3.947981]--[loss-1.662113]--[ETA-5:41:30]
+2023.07.16-10:48:54:102:[step-13200]--[loss-3.695520]--[loss-1.704073]--[ETA-5:38:18]
+2023.07.16-10:52:39:202:[step-13300]--[loss-4.022359]--[loss-1.652572]--[ETA-5:31:58]
+End of epoch 60 / 100 	 Time Taken: 502 sec
+saving the model at the end of epoch 60, iters 13320
+2023.07.16-10:56:27:80:[step-13400]--[loss-3.814914]--[loss-1.695920]--[ETA-5:29:42]
+2023.07.16-11:00:12:180:[step-13500]--[loss-3.717465]--[loss-1.709694]--[ETA-5:25:43]
+End of epoch 61 / 100 	 Time Taken: 501 sec
+2023.07.16-11:04:00:58:[step-13600]--[loss-3.627222]--[loss-1.682859]--[ETA-5:23:32]
+2023.07.16-11:07:45:158:[step-13700]--[loss-3.881593]--[loss-1.652397]--[ETA-5:19:18]
+End of epoch 62 / 100 	 Time Taken: 502 sec
+2023.07.16-11:11:32:36:[step-13800]--[loss-4.170503]--[loss-1.660927]--[ETA-5:13:03]
+2023.07.16-11:15:18:136:[step-13900]--[loss-3.816025]--[loss-1.634686]--[ETA-5:14:55]
+End of epoch 63 / 100 	 Time Taken: 502 sec
+2023.07.16-11:19:05:14:[step-14000]--[loss-3.820536]--[loss-1.679283]--[ETA-5:12:19]
+2023.07.16-11:22:51:114:[step-14100]--[loss-3.902455]--[loss-1.680217]--[ETA-5:06:26]
+2023.07.16-11:26:38:214:[step-14200]--[loss-4.134219]--[loss-1.674931]--[ETA-5:00:50]
+End of epoch 64 / 100 	 Time Taken: 504 sec
+2023.07.16-11:30:26:92:[step-14300]--[loss-4.088729]--[loss-1.640887]--[ETA-5:02:29]
+2023.07.16-11:34:11:192:[step-14400]--[loss-3.710420]--[loss-1.608158]--[ETA-4:52:29]
+End of epoch 65 / 100 	 Time Taken: 503 sec
+2023.07.16-11:37:59:70:[step-14500]--[loss-3.703079]--[loss-1.730623]--[ETA-4:46:18]
+2023.07.16-11:41:45:170:[step-14600]--[loss-3.693422]--[loss-1.637230]--[ETA-4:44:37]
+End of epoch 66 / 100 	 Time Taken: 503 sec
+2023.07.16-11:45:33:48:[step-14700]--[loss-3.667435]--[loss-1.642688]--[ETA-4:40:04]
+2023.07.16-11:49:19:148:[step-14800]--[loss-3.826277]--[loss-1.726063]--[ETA-4:38:26]
+End of epoch 67 / 100 	 Time Taken: 503 sec
+2023.07.16-11:53:07:26:[step-14900]--[loss-3.776171]--[loss-1.650001]--[ETA-4:34:34]
+2023.07.16-11:56:53:126:[step-15000]--[loss-3.981259]--[loss-1.738531]--[ETA-4:32:07]
+End of epoch 68 / 100 	 Time Taken: 502 sec
+2023.07.16-12:00:40:4:[step-15100]--[loss-3.812169]--[loss-1.649504]--[ETA-4:26:21]
+2023.07.16-12:04:25:104:[step-15200]--[loss-4.149172]--[loss-1.610052]--[ETA-4:21:48]
+2023.07.16-12:08:11:204:[step-15300]--[loss-3.701772]--[loss-1.647872]--[ETA-4:25:07]
+End of epoch 69 / 100 	 Time Taken: 501 sec
+2023.07.16-12:11:57:82:[step-15400]--[loss-3.867177]--[loss-1.635546]--[ETA-4:13:26]
+2023.07.16-12:15:43:182:[step-15500]--[loss-3.685400]--[loss-1.576831]--[ETA-4:09:46]
+End of epoch 70 / 100 	 Time Taken: 501 sec
+2023.07.16-12:19:30:60:[step-15600]--[loss-3.658231]--[loss-1.579875]--[ETA-4:08:09]
+2023.07.16-12:23:15:160:[step-15700]--[loss-3.666900]--[loss-1.644997]--[ETA-4:05:52]
+End of epoch 71 / 100 	 Time Taken: 502 sec
+2023.07.16-12:27:03:38:[step-15800]--[loss-3.616027]--[loss-1.603433]--[ETA-4:00:11]
+2023.07.16-12:30:48:138:[step-15900]--[loss-4.641587]--[loss-1.736015]--[ETA-3:55:30]
+End of epoch 72 / 100 	 Time Taken: 501 sec
+2023.07.16-12:34:35:16:[step-16000]--[loss-3.786434]--[loss-1.608567]--[ETA-3:53:23]
+2023.07.16-12:38:21:116:[step-16100]--[loss-3.875685]--[loss-1.613990]--[ETA-3:56:36]
+2023.07.16-12:42:07:216:[step-16200]--[loss-4.046119]--[loss-1.662557]--[ETA-3:44:26]
+End of epoch 73 / 100 	 Time Taken: 503 sec
+2023.07.16-12:45:55:94:[step-16300]--[loss-3.973489]--[loss-1.602656]--[ETA-3:41:41]
+2023.07.16-12:49:40:194:[step-16400]--[loss-4.035556]--[loss-1.640256]--[ETA-3:38:34]
+End of epoch 74 / 100 	 Time Taken: 502 sec
+2023.07.16-12:53:27:72:[step-16500]--[loss-3.347713]--[loss-1.511119]--[ETA-3:35:03]
+2023.07.16-12:57:13:172:[step-16600]--[loss-3.226180]--[loss-1.511756]--[ETA-3:31:31]
+End of epoch 75 / 100 	 Time Taken: 502 sec
+2023.07.16-13:01:01:50:[step-16700]--[loss-3.890665]--[loss-1.568362]--[ETA-3:27:50]
+2023.07.16-13:04:47:150:[step-16800]--[loss-3.683844]--[loss-1.570387]--[ETA-3:22:32]
+End of epoch 76 / 100 	 Time Taken: 503 sec
+2023.07.16-13:08:35:28:[step-16900]--[loss-4.109938]--[loss-1.655029]--[ETA-3:19:57]
+2023.07.16-13:12:20:128:[step-17000]--[loss-4.027665]--[loss-1.638713]--[ETA-3:16:07]
+End of epoch 77 / 100 	 Time Taken: 503 sec
+2023.07.16-13:16:08:6:[step-17100]--[loss-4.037109]--[loss-1.627658]--[ETA-3:11:02]
+2023.07.16-13:19:54:106:[step-17200]--[loss-3.889685]--[loss-1.605670]--[ETA-3:08:39]
+2023.07.16-13:23:40:206:[step-17300]--[loss-3.233183]--[loss-1.551033]--[ETA-3:03:10]
+End of epoch 78 / 100 	 Time Taken: 503 sec
+2023.07.16-13:27:28:84:[step-17400]--[loss-3.711942]--[loss-1.609696]--[ETA-3:02:39]
+2023.07.16-13:31:14:184:[step-17500]--[loss-3.575227]--[loss-1.597219]--[ETA-3:02:30]
+End of epoch 79 / 100 	 Time Taken: 503 sec
+2023.07.16-13:35:02:62:[step-17600]--[loss-3.554331]--[loss-1.555074]--[ETA-2:52:41]
+2023.07.16-13:38:48:162:[step-17700]--[loss-3.640178]--[loss-1.541285]--[ETA-2:48:37]
+End of epoch 80 / 100 	 Time Taken: 503 sec
+saving the model at the end of epoch 80, iters 17760
+2023.07.16-13:42:36:40:[step-17800]--[loss-3.683713]--[loss-1.605855]--[ETA-2:46:07]
+2023.07.16-13:46:22:140:[step-17900]--[loss-3.798163]--[loss-1.636690]--[ETA-2:40:47]
+End of epoch 81 / 100 	 Time Taken: 502 sec
+2023.07.16-13:50:09:18:[step-18000]--[loss-3.605275]--[loss-1.511652]--[ETA-2:36:08]
+2023.07.16-13:53:55:118:[step-18100]--[loss-3.519422]--[loss-1.500194]--[ETA-2:34:21]
+2023.07.16-13:57:41:218:[step-18200]--[loss-3.746325]--[loss-1.541564]--[ETA-2:30:31]
+End of epoch 82 / 100 	 Time Taken: 503 sec
+2023.07.16-14:01:29:96:[step-18300]--[loss-3.669197]--[loss-1.559416]--[ETA-2:27:29]
+2023.07.16-14:05:15:196:[step-18400]--[loss-3.768135]--[loss-1.557480]--[ETA-2:22:24]
+End of epoch 83 / 100 	 Time Taken: 503 sec
+2023.07.16-14:09:02:74:[step-18500]--[loss-3.550762]--[loss-1.499917]--[ETA-2:23:06]
+2023.07.16-14:12:48:174:[step-18600]--[loss-3.896717]--[loss-1.521981]--[ETA-2:14:57]
+End of epoch 84 / 100 	 Time Taken: 503 sec
+2023.07.16-14:16:37:52:[step-18700]--[loss-3.876968]--[loss-1.639678]--[ETA-2:11:25]
+2023.07.16-14:20:23:152:[step-18800]--[loss-3.565256]--[loss-1.515483]--[ETA-2:08:27]
+End of epoch 85 / 100 	 Time Taken: 504 sec
+2023.07.16-14:24:11:30:[step-18900]--[loss-3.401363]--[loss-1.570183]--[ETA-2:06:30]
+2023.07.16-14:27:57:130:[step-19000]--[loss-3.652247]--[loss-1.516755]--[ETA-2:01:42]
+End of epoch 86 / 100 	 Time Taken: 503 sec
+2023.07.16-14:31:45:8:[step-19100]--[loss-4.184641]--[loss-1.541938]--[ETA-1:55:59]
+2023.07.16-14:35:31:108:[step-19200]--[loss-3.742758]--[loss-1.635681]--[ETA-1:52:26]
+2023.07.16-14:39:17:208:[step-19300]--[loss-3.767766]--[loss-1.578782]--[ETA-1:49:22]
+End of epoch 87 / 100 	 Time Taken: 503 sec
+2023.07.16-14:43:04:86:[step-19400]--[loss-3.840679]--[loss-1.530626]--[ETA-1:44:39]
+2023.07.16-14:46:50:186:[step-19500]--[loss-3.601205]--[loss-1.513529]--[ETA-1:41:12]
+End of epoch 88 / 100 	 Time Taken: 502 sec
+2023.07.16-14:50:38:64:[step-19600]--[loss-4.036530]--[loss-1.633035]--[ETA-1:38:06]
+2023.07.16-14:54:24:164:[step-19700]--[loss-3.432246]--[loss-1.487380]--[ETA-1:33:47]
+End of epoch 89 / 100 	 Time Taken: 503 sec
+2023.07.16-14:58:12:42:[step-19800]--[loss-3.707627]--[loss-1.538061]--[ETA-1:30:14]
+2023.07.16-15:01:58:142:[step-19900]--[loss-3.757411]--[loss-1.512940]--[ETA-1:26:35]
+End of epoch 90 / 100 	 Time Taken: 503 sec
+2023.07.16-15:05:46:20:[step-20000]--[loss-3.758329]--[loss-1.566774]--[ETA-1:22:11]
+2023.07.16-15:09:32:120:[step-20100]--[loss-3.877681]--[loss-1.569383]--[ETA-1:18:39]
+2023.07.16-15:13:17:220:[step-20200]--[loss-3.341453]--[loss-1.527196]--[ETA-1:15:16]
+End of epoch 91 / 100 	 Time Taken: 503 sec
+2023.07.16-15:17:05:98:[step-20300]--[loss-3.470214]--[loss-1.494662]--[ETA-1:11:08]
+2023.07.16-15:20:52:198:[step-20400]--[loss-3.470668]--[loss-1.550883]--[ETA-1:07:37]
+End of epoch 92 / 100 	 Time Taken: 503 sec
+2023.07.16-15:24:39:76:[step-20500]--[loss-3.465169]--[loss-1.564090]--[ETA-1:04:19]
+2023.07.16-15:28:26:176:[step-20600]--[loss-3.531635]--[loss-1.492497]--[ETA-1:00:16]
+End of epoch 93 / 100 	 Time Taken: 504 sec
+2023.07.16-15:32:14:54:[step-20700]--[loss-3.997879]--[loss-1.566002]--[ETA-0:56:20]
+2023.07.16-15:36:01:154:[step-20800]--[loss-3.611492]--[loss-1.546001]--[ETA-0:54:07]
+End of epoch 94 / 100 	 Time Taken: 504 sec
+2023.07.16-15:39:49:32:[step-20900]--[loss-3.941734]--[loss-1.545507]--[ETA-0:48:50]
+2023.07.16-15:43:35:132:[step-21000]--[loss-3.507023]--[loss-1.514082]--[ETA-0:45:03]
+End of epoch 95 / 100 	 Time Taken: 503 sec
+2023.07.16-15:47:23:10:[step-21100]--[loss-3.727613]--[loss-1.516569]--[ETA-0:41:41]
+2023.07.16-15:51:08:110:[step-21200]--[loss-3.485328]--[loss-1.497979]--[ETA-0:37:26]
+2023.07.16-15:54:54:210:[step-21300]--[loss-3.671631]--[loss-1.489471]--[ETA-0:33:40]
+End of epoch 96 / 100 	 Time Taken: 502 sec
+2023.07.16-15:58:41:88:[step-21400]--[loss-3.486228]--[loss-1.454664]--[ETA-0:30:00]
+2023.07.16-16:02:26:188:[step-21500]--[loss-3.771055]--[loss-1.529691]--[ETA-0:26:22]
+End of epoch 97 / 100 	 Time Taken: 502 sec
+2023.07.16-16:06:14:66:[step-21600]--[loss-3.429419]--[loss-1.473728]--[ETA-0:22:22]
+2023.07.16-16:09:59:166:[step-21700]--[loss-3.831884]--[loss-1.442050]--[ETA-0:18:40]
+End of epoch 98 / 100 	 Time Taken: 502 sec
+2023.07.16-16:13:47:44:[step-21800]--[loss-3.848308]--[loss-1.551780]--[ETA-0:14:58]
+2023.07.16-16:17:33:144:[step-21900]--[loss-4.044990]--[loss-1.574448]--[ETA-0:11:24]
+End of epoch 99 / 100 	 Time Taken: 502 sec
+2023.07.16-16:21:20:22:[step-22000]--[loss-3.549531]--[loss-1.513182]--[ETA-0:07:35]
+2023.07.16-16:25:05:122:[step-22100]--[loss-3.433872]--[loss-1.454012]--[ETA-0:03:45]
+2023.07.16-16:28:51:222:[step-22200]--[loss-3.486496]--[loss-1.454109]--[ETA-0:08:21]
+End of epoch 100 / 100 	 Time Taken: 503 sec
+saving the model at the end of epoch 100, iters 22200

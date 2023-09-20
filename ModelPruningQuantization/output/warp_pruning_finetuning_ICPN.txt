@@ -1,0 +1,214 @@
+------------ Options -------------
+PBAFN_gen_checkpoint: checkpoints/PBAFN_e2e/PBAFN_gen_epoch_101.pth
+PBAFN_warp_checkpoint: checkpoints/PBAFN_e2e/PBAFN_warp_epoch_101.pth
+PFAFN_gen_checkpoint: None
+PFAFN_warp_checkpoint: checkpoints/PFAFN_warp_epoch_101.pth
+batchSize: 45
+beta1: 0.5
+checkpoints_dir: ./checkpoints
+continue_train: False
+data_type: 32
+dataroot: dataset/VITON_traindata/
+debug: False
+display_freq: 100
+display_winsize: 512
+fineSize: 512
+gpu_ids: [0]
+input_nc: 3
+isTrain: True
+label_nc: 14
+lambda_feat: 10.0
+launcher: pytorch
+loadSize: 512
+load_pretrain: 
+local_rank: 0
+lr: 1e-05
+max_dataset_size: inf
+nThreads: 1
+n_blocks_global: 4
+n_blocks_local: 3
+n_downsample_global: 4
+n_layers_D: 3
+n_local_enhancers: 1
+name: warp_pruning_finetuning_ICPN
+ndf: 64
+netG: global
+ngf: 64
+niter: 10
+niter_decay: 10
+niter_fix_global: 0
+no_flip: False
+no_ganFeat_loss: False
+no_html: False
+no_lsgan: False
+no_vgg_loss: False
+norm: instance
+num_D: 2
+num_gpus: 1
+output_nc: 3
+phase: train
+pool_size: 0
+print_freq: 100
+resize_or_crop: None
+save_checkpoint: ./checkpoints/pruning
+save_epoch_freq: 20
+save_latest_freq: 1000
+serial_batches: False
+tf_log: False
+tv_weight: 0.1
+use_dropout: False
+verbose: False
+which_epoch: latest
+-------------- End ----------------
+------------ Options -------------
+PBAFN_gen_checkpoint: checkpoints/PBAFN_e2e/PBAFN_gen_epoch_101.pth
+PBAFN_warp_checkpoint: checkpoints/PBAFN_e2e/PBAFN_warp_epoch_101.pth
+PFAFN_gen_checkpoint: None
+PFAFN_warp_checkpoint: checkpoints/PFAFN_warp_epoch_101.pth
+batchSize: 45
+beta1: 0.5
+checkpoints_dir: ./checkpoints
+continue_train: False
+data_type: 32
+dataroot: dataset/VITON_traindata/
+debug: False
+display_freq: 100
+display_winsize: 512
+fineSize: 512
+gpu_ids: [0]
+input_nc: 3
+isTrain: True
+label_nc: 14
+lambda_feat: 10.0
+launcher: pytorch
+loadSize: 512
+load_pretrain: 
+local_rank: 0
+lr: 1e-05
+max_dataset_size: inf
+nThreads: 1
+n_blocks_global: 4
+n_blocks_local: 3
+n_downsample_global: 4
+n_layers_D: 3
+n_local_enhancers: 1
+name: warp_pruning_finetuning_ICPN
+ndf: 64
+netG: global
+ngf: 64
+niter: 10
+niter_decay: 10
+niter_fix_global: 0
+no_flip: False
+no_ganFeat_loss: False
+no_html: False
+no_lsgan: False
+no_vgg_loss: False
+norm: instance
+num_D: 2
+num_gpus: 1
+output_nc: 3
+phase: train
+pool_size: 0
+print_freq: 100
+resize_or_crop: None
+save_checkpoint: ./checkpoints/pruning
+save_epoch_freq: 20
+save_latest_freq: 1000
+serial_batches: False
+tf_log: False
+tv_weight: 0.1
+use_dropout: False
+verbose: False
+which_epoch: latest
+-------------- End ----------------
+------------ Options -------------
+PBAFN_gen_checkpoint: checkpoints/PBAFN_e2e/PBAFN_gen_epoch_101.pth
+PBAFN_warp_checkpoint: checkpoints/PBAFN_e2e/PBAFN_warp_epoch_101.pth
+PFAFN_gen_checkpoint: None
+PFAFN_warp_checkpoint: checkpoints/PFAFN_warp_epoch_101.pth
+batchSize: 45
+beta1: 0.5
+checkpoints_dir: ./checkpoints
+continue_train: False
+data_type: 32
+dataroot: dataset/VITON_traindata/
+debug: False
+display_freq: 100
+display_winsize: 512
+fineSize: 512
+gpu_ids: [0]
+input_nc: 3
+isTrain: True
+label_nc: 14
+lambda_feat: 10.0
+launcher: pytorch
+loadSize: 512
+load_pretrain: 
+local_rank: 0
+lr: 1e-05
+max_dataset_size: inf
+nThreads: 1
+n_blocks_global: 4
+n_blocks_local: 3
+n_downsample_global: 4
+n_layers_D: 3
+n_local_enhancers: 1
+name: warp_pruning_finetuning_ICPN
+ndf: 64
+netG: global
+ngf: 64
+niter: 10
+niter_decay: 10
+niter_fix_global: 0
+no_flip: False
+no_ganFeat_loss: False
+no_html: False
+no_lsgan: False
+no_vgg_loss: False
+norm: instance
+num_D: 2
+num_gpus: 1
+output_nc: 3
+phase: train
+pool_size: 0
+print_freq: 100
+resize_or_crop: None
+save_checkpoint: ./checkpoints/pruning
+save_epoch_freq: 20
+save_latest_freq: 1000
+serial_batches: False
+tf_log: False
+tv_weight: 0.1
+use_dropout: False
+verbose: False
+which_epoch: latest
+-------------- End ----------------
+dataset [AlignedDataset] was created
+#fine-pruning images = 316
+Start setting ignored model layer...
+Start initializing pruner...
+Start pruning warp_model...
+  Iter 1/5, IFPN Params: 12.57 M => 10.67 M; CFPN Params: 12.57 M => 10.67 M
+  Iter 1/5, IFPN MACs: 16.66 G => 15.31 G; CFPN MACs: 16.66 G => 15.31 G
+  Iter 2/5, IFPN Params: 12.57 M => 8.97 M; CFPN Params: 12.57 M => 8.97 M
+  Iter 2/5, IFPN MACs: 16.66 G => 14.16 G; CFPN MACs: 16.66 G => 14.16 G
+  Iter 3/5, IFPN Params: 12.57 M => 7.51 M; CFPN Params: 12.57 M => 7.51 M
+  Iter 3/5, IFPN MACs: 16.66 G => 13.11 G; CFPN MACs: 16.66 G => 13.11 G
+  Iter 4/5, IFPN Params: 12.57 M => 6.19 M; CFPN Params: 12.57 M => 6.19 M
+  Iter 4/5, IFPN MACs: 16.66 G => 12.22 G; CFPN MACs: 16.66 G => 12.22 G
+  Iter 5/5, IFPN Params: 12.57 M => 5.11 M; CFPN Params: 12.57 M => 5.11 M
+  Iter 5/5, IFPN MACs: 16.66 G => 11.50 G; CFPN MACs: 16.66 G => 11.50 G
+Channels change in every layer: torch.Size([1, 256, 128, 96]) ===> torch.Size([1, 256, 128, 96])
+Channels change in every layer: torch.Size([1, 256, 64, 48]) ===> torch.Size([1, 256, 64, 48])
+Channels change in every layer: torch.Size([1, 256, 32, 24]) ===> torch.Size([1, 256, 32, 24])
+Channels change in every layer: torch.Size([1, 256, 16, 12]) ===> torch.Size([1, 256, 16, 12])
+Channels change in every layer: torch.Size([1, 256, 8, 6]) ===> torch.Size([1, 256, 8, 6])
+IFPN_Module Prune Average Absolute Error:0.48119863867759705, Average Relative Error: 167.31434631347656%
+Channels change in every layer: torch.Size([1, 256, 128, 96]) ===> torch.Size([1, 256, 128, 96])
+Channels change in every layer: torch.Size([1, 256, 64, 48]) ===> torch.Size([1, 256, 64, 48])
+Channels change in every layer: torch.Size([1, 256, 32, 24]) ===> torch.Size([1, 256, 32, 24])
+Channels change in every layer: torch.Size([1, 256, 16, 12]) ===> torch.Size([1, 256, 16, 12])
+Channels change in every layer: torch.Size([1, 256, 8, 6]) ===> torch.Size([1, 256, 8, 6])
+CFPN_Module Prune Average Absolute Error:0.3800809383392334, Average Relative Error: 125.6597900390625%
+Successfully pruned the Module!

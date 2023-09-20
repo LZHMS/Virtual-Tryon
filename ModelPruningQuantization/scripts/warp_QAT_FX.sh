@@ -1,0 +1,1 @@
+python warp_QAT_FX.py --name warp_QAT_FX --PFAFN_warp_checkpoint checkpoints/pruning/warp_pruning_finetuning_ICPN/WarpModel_ICPN_0.5.pth --lr 0.00001 --niter 10 --niter_decay 10 --batchSize 2 --label_nc 14 > output/warp_QAT_FX.txt
