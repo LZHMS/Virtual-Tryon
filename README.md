@@ -26,9 +26,16 @@
 ### 环境配置
 
 + 克隆仓库
-  `git clone https://github.com/LZHMS/Virtual-Tryon.git`
+
+```
+git clone https://github.com/LZHMS/Virtual-Tryon.git
+```
+
 + 安装依赖库
-  `pip install -r requirements.txt`
+
+```
+pip install -r requirements.txt
+```
 
 ### 项目文件介绍
 
