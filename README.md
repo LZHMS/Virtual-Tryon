@@ -37,6 +37,7 @@
 #### 模型结构介绍
 
 本项目基于 $PFAFN$ 模型重新设计各个网络模块，具体结构如下图所示：
+
 ![DNN网络结构](https://cdn.statically.io/gh/LZHMS/picx-images-hosting@master/Profile/model.4ax0n6qbtbs0.webp)
 
 #### 项目工程化落地
