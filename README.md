@@ -4,7 +4,7 @@
 
 本项目主要面向第 $14$ 届全国服务外包创新创业比赛 $A16$ 赛道虚拟试衣赛题，采用 $2D$ 虚拟试衣技术依托于 $VITON$ 开源数据集训练 $DNN$ 网络并着重进行工程化落地应用；项目选用了前沿顶刊论文的 $PFAFN$ 模型，在此基础上对模型进行优化改进，实现了模型压缩和推理加速并使用 $OpenVINO$ 框架进行部署应用，出色地完成了赛题的要求。
 
-![项目示例](images/examples.png)
+![项目示例](https://cdn.statically.io/gh/LZHMS/picx-images-hosting@master/Profile/examples.4u074u4fgio0.webp)
 
 #### 项目开发环境
 
@@ -37,9 +37,9 @@
 #### 模型结构介绍
 
 本项目基于 $PFAFN$ 模型重新设计各个网络模块，具体结构如下图所示：
-![DNN网络结构](images/model.png)
+![DNN网络结构](https://cdn.statically.io/gh/LZHMS/picx-images-hosting@master/Profile/model.4ax0n6qbtbs0.webp)
 
 #### 项目工程化落地
 
 为了满足赛题方的要求，本项目开展了工程化落地部分，主要分为两个部分，模型训练和模型剪枝量化。项目工程化部署总图如下所示：
-![项目工程化部署总图](images/project.png)
+![项目工程化部署总图](https://cdn.statically.io/gh/LZHMS/picx-images-hosting@master/Profile/project.1dom5gtegs2o.webp)
