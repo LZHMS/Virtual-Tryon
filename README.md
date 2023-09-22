@@ -105,3 +105,10 @@ pip install -r requirements.txt
 |n=1000|147.8491|94.7902|10.81|1.5598|
 |n=10000|1489.1325|927.4293|10.77|1.6057|
 |Average Time|0.1488|0.029|10.79|1.6017|
+
+### 参考文献
++ Y. Ge, Y. Song, R. Zhang, C. Ge, W. Liu, and P. Luo, "Parser-Free Virtual Try-on via Distilling Appearance Flows," arXiv preprint arXiv:2103.04559, 2021.
++ Y. Cheng, D. Wang, P. Zhou and T. Zhang, "Model Compression and Acceleration for Deep
+Neural Networks: The Principles, Progress, and Challenges," in IEEE Signal Processing Magazine,
+vol. 35, no. 1, pp. 126-136, Jan. 2018, doi: 10.1109/MSP.2017.2765695.
++ [PyTorch Quantization Aware Training](https://leimao.github.io/blog/PyTorch-Quantization-Aware-Training/)
